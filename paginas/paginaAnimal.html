@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/estilosCadastro.css">
+        
+    </head>
+    <body>
+        
+        <div class="divAnimal">
+            <form action="../php/enviarDadosAnimal.php" method="post">
+                <div class="divCampo">
+                    <input name="campoEspecie" type="text" placeholder="Especie" maxlength="50" required>
+                </div>
+                <div class="divCampo">
+                    <input name="campoRaca" type="text" placeholder="Raça" maxlength="50" required>
+                </div>
+                <div class="divSelect">
+                    <select name="campoSexo" required>
+                        <option value="Macho">Macho</option>
+                        <option value="Fêmea">Fêmea</option>
+                        <option value="Desconhecido">Não Sei</option>
+                    </select>
+                </div>
+                <div class="divCampo">
+                    <input name="campoPorte" type="text" placeholder="Porte" maxlength="50" required>
+                </div>
+                <div class="divCampo">
+                    <input name="campoPeso" type="text" placeholder="Peso" maxlength="50" required>
+                </div>
+                <div class="divSelect">
+                    <select name="campoStatus" required>
+                        <option value="Perdido">Perdido</option>
+                        <option value="Encontrado">Encontrado</option>
+                    </select>
+                </div>
+                <div class="divCampo">
+                    <input name="campoDataStatus" type="text" placeholder="Data da perda/Data de encontro" maxlength="50" required>
+                </div>
+                <div class="divCampo">
+                    <input name="campoDataNasc" type="text" placeholder="Data de nascimento do animal" maxlength="50" required>
+                </div>
+                <button class="botaoEnviar">Enviar dados</button>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+*{margin: 0; padding: 0;}
+
+body{
+    background-color: white;
+}
+
+input{
+    padding-left: 10px;
+    border:none;
+    outline: none;
+    width: 100%;
+}
+
+.divAnimal{
+    position:absolute;
+    border-radius: 3px;
+    border: solid 2px grey;
+    background-color: darkgray;
+    padding: 18px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+
+.divCampo{
+    background-color:white;
+    width: 250px;
+    border: solid 1px grey;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    margin: 10px;
+}
+
+.botaoEnviar{
+    width: 100%;
+    margin-top: 30px;
+    height: 35px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 18;
+}
+
+.botaoEnviar:hover{
+    cursor: pointer;
+    background-color: dimgray;
+}

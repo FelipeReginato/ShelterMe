@@ -1,0 +1,67 @@
+body{
+
+background-image:url(../imagens/patinhas.jpg);
+background-size: 20%;
+background-repeat:repeat;
+
+
+
+}
+
+.divLogin {
+    text-align: center;
+    width: 300px;
+    height: 500px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 1em grey;
+    border-radius: 15px;
+    margin-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.divBemVindo{
+    padding-top: 35px;
+    text-align: center;
+    font-style: bold;
+    color: orange;
+    font-family: Apple Chancery, cursive;
+    font-size: 28;
+    width: 100%;
+    
+}   
+.LinhaBemVindo{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    width: 85%;
+    border-bottom: 2.5px solid orange;
+
+}   
+input{
+    border-left: 10px;
+    margin-bottom: 12px;
+    padding: 15px;
+    width: 95%;
+    border: 1px solid orange;
+    border-radius: 40px;
+    
+} 
+::placeholder{
+    color: orange;
+
+}
+    
+button{
+    border-left: 10px;
+    margin-bottom: 12px;
+    padding: 15px;
+    width: 95%;
+    background-color: orange;
+    border: 1px solid white;
+    border-radius: 40px;
+}  
+   
+

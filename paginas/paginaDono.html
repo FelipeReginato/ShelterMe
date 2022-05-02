@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/estilosCadastro.css">
+        
+    </head>
+    <body>
+        
+        <div class="divAnimal">
+            <form action="../php/enviarDadosDono.php" method="post">
+                <div class="divCampo">
+                    <input name="campoNome" type="text" placeholder="Nome" maxlength="50" required>
+                </div>
+                <div class="divCampo">
+                    <input name="campoTelefone" type="text" placeholder="Telefone" maxlength="50" required> 
+                </div>
+                <div class="divCampo">
+                    <input name="campoCPF" type="text" placeholder="CPF" maxlength="50" required>
+                </div>
+                <button class="botaoEnviar">Enviar dados</button>
+            </form>
+        </div>
+    </body>
+</html>
