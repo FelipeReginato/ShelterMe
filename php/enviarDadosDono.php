@@ -4,6 +4,11 @@ require 'conectarBD.php';
 $nome = $_POST['campoNome'];
 $telefone = $_POST['campoTelefone'];
 $cpf = $_POST['campoCPF'];
+$estado = $_POST['campoEstado'];
+$cidade = $_POST['campoCidade'];
+$bairro = $_POST['campoBairro'];
+$rua = $_POST['campoRua'];
+$numero = $_POST['campoNumero'];
 
 $conn = mysqli_connect($servername, $username, $password, $database);
 
