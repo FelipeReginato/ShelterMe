@@ -1,0 +1,25 @@
+body{
+
+    background-image: url();    
+    background-size: 100%;
+
+}
+
+.divLogo{
+
+    font-family: cursive;
+    font-size: 60;
+    color: orange;
+    height: 100px;
+    width: 240px;
+
+}
+.divTexto{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: small 18;
+    color: white;
+    height: 70px;
+    width: 250px;
+
+}
