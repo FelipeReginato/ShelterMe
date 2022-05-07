@@ -1,23 +1,38 @@
 body{
 
-background-image:url(../imagens/patinhas.jpg);
-background-size: 20%;
-background-repeat:repeat;
+background-image: url(../imagens/background.jpg);
+background-size: 100%;
+background-repeat: no-repeat;
 
 
 
 }
+.divLogo{
+    height: 80px;
+    width: 80px;
+    background-image: url(../imagens/LogoSemShelter.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-left: 35px;
+    margin-top: 25px;
+    position:relative;
+    cursor: pointer;
+    
+}
+
 
 .divLogin {
+
+    background-color: rgba(255, 255, 255, 0.4);
     text-align: center;
     width: 300px;
     height: 500px;
-    background-color: whitesmoke;
     box-shadow: 0 0 1em grey;
     border-radius: 15px;
-    margin-top: 130px;
+    margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
+   
    
 }
 
@@ -25,19 +40,20 @@ background-repeat:repeat;
     padding-top: 35px;
     text-align: center;
     font-style: bold;
-    color: orange;
-    font-family: Apple Chancery, cursive;
+    color: #FF914D;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 28;
     width: 100%;
     
 }   
 .LinhaBemVindo{
+    border-radius: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5px;
     margin-bottom: 50px;
     width: 85%;
-    border-bottom: 2.5px solid orange;
+    border-bottom: 2.5px solid #FF914D;
 
 }   
 input{
@@ -45,12 +61,13 @@ input{
     margin-bottom: 12px;
     padding: 15px;
     width: 95%;
-    border: 1px solid orange;
+    border: 2px solid #FF914D;
     border-radius: 40px;
-    
+    font-size: 20;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
 } 
 ::placeholder{
-    color: orange;
+    color: #FF914D;
 
 }
     
@@ -59,9 +76,19 @@ button{
     margin-bottom: 12px;
     padding: 15px;
     width: 95%;
-    background-color: orange;
-    border: 1px solid white;
+    background-color: #FF914D;
+    border: 2px solid white;
     border-radius: 40px;
+    color: white;
+    font-size: 20;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }  
+button:hover{
+
+    background-color: white;
+    color: #FF914D;
+    border: 2px solid #FF914D;
+    cursor: pointer;
+}
    
 

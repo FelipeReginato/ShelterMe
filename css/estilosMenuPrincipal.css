@@ -1,25 +1,85 @@
 body{
 
-    background-image: url();    
+    background-image: url(../imagens/background.jpg);    
     background-size: 100%;
+    
+
 
 }
 
 .divLogo{
-
-    font-family: cursive;
-    font-size: 60;
-    color: orange;
-    height: 100px;
-    width: 240px;
-
+    height: 195px;
+    width: 195px;
+    background-image: url(../imagens/LogoShelterMe.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-left: 35px;
+    margin-top: 22px;
+    
 }
+
 .divTexto{
 
+
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: small 18;
-    color: white;
-    height: 70px;
-    width: 250px;
+    font-size: 18;
+    color: black;
+    height: 200px;
+    width: 520px;
+    margin-top: 320px;
+    margin-left: 100px;
+    position: absolute;
 
 }
+
+.divBotoes{
+   
+    padding-left: 35px;
+    height: 400px;
+    width: 300px;
+    margin-left: 1100px;
+    margin-top: 110px;
+    background-color: rgba(60, 60, 59, 0.4);
+    border-radius: 10px;
+
+}
+.divBotoes:hover{
+    background-color: rgba(60, 60, 59, 0.2);
+
+}
+
+.botaoLogin{
+
+    width: 85%;
+    background-color: #FF914D; 
+    border-radius: 10px;
+    border: none;
+    height: 45px;   
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17;
+    color: white;
+    margin-top: 30px;
+    cursor: pointer;
+   
+}
+
+.botaoCadastro{
+
+    width: 85%;
+    background-color: #FF914D; 
+    border-radius: 10px;
+    border: none;
+    height: 45px;   
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17;
+    color: white;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+button:hover{
+
+    background-color: white; ;
+    color: #FF914D;
+}
+
