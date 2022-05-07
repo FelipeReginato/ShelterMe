@@ -14,6 +14,8 @@ $dataStatus = $_POST['campoDataStatus'];
 $dataNasc = $_POST['campoDataNasc'];
 $nome = $_POST['campoNome'];
 
+
+
 if($dataNasc != ""){
     if (strpos($dataNasc,"-") != false){
         $strData = explode('-',$dataNasc);
@@ -51,9 +53,8 @@ if (!$conn) {
     die("Falha na conexão com o Banco de Dados: " . mysqli_connect_error());
 }
 
-
-$sql = "INSERT INTO animal (Especie, Raca, Sexo, Porte, Peso, Status, DataStatus, DataNasc, Estado, Cidade, Endereco,Nome) 
-VALUES ('$especie','$raca','$sexo','$porte','$peso','$status','$novaDataStatus','$novaDataNasc','$estado','$cidade','$endereco','$nome')";
+$sql = "INSERT INTO animal (Especie, Raca, Sexo, Porte, Peso, Status, DataStatus, DataNasc, Estado, Cidade, Endereco, Nome) 
+    VALUES ('$especie','$raca','$sexo','$porte','$peso','$status','$novaDataStatus','$novaDataNasc','$estado','$cidade','$endereco','$nome')";
 
 if ($result = mysqli_query($conn, $sql)) {
     echo "Novo registro adicionado";

@@ -16,7 +16,7 @@ if (!$conn) {
 
 
 
-$result = mysqli_query($conn,"SELECT * FROM Postagem");
+$result = mysqli_query($conn,"SELECT * FROM animal WHERE CodAnimal IN (SELECT CodAnimal FROM postagem)");
 
 while ($row = mysqli_fetch_assoc($result)) {
     echo "<table>";
@@ -51,10 +51,16 @@ while ($row = mysqli_fetch_assoc($result)) {
         ?>
         <td style="text-align:left">
             <img class="imagemSelecionada" src="../imagens/foto.png" />
-        </td>
+        </td><td>
         <?php
     }
-    
+    ?>
+                        <a href='deletarPublicacao.php?id=<?php echo $row["CodAnimal"];?>'>Editar</a>
+                        </td><td>
+                        <a href='deletarPublicacao.php?id=<?php echo $row["CodAnimal"];?>'>Deletar</a>
+                        </td>
+                        </tr>
+	<?php
 }
 mysqli_close($con);
 ?>
