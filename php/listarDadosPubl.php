@@ -16,14 +16,12 @@ if (!$conn) {
 
 
 
-$result = mysqli_query($conn,"SELECT * FROM Animal");
+$result = mysqli_query($conn,"SELECT * FROM Postagem");
 
 while ($row = mysqli_fetch_assoc($result)) {
     echo "<table>";
     echo "<tr>";
     echo "<td>";
-    echo $row["CodAnimal"];
-    echo "</td><td>";
     echo $row["Especie"];
     echo "</td><td>";
     echo $row["Raca"];
