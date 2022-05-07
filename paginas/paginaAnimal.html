@@ -9,7 +9,8 @@
         <div class="divAnimal">
             <form action="../php/enviarDadosAnimal.php" method="post">
                 <div class="divCampo">
-                    <input name="campoEspecie" type="text" placeholder="Especie" maxlength="50" required>
+                    <input name="campoEspecie" type="text" placeholder="Espécie" maxlength="50" 
+                    pattern="[a-zA-Z\s]{10,50}" title="Espécie entre 10 e 50 letras" required>
                 </div>
                 <div class="divCampo">
                     <input name="campoRaca" type="text" placeholder="Raça" maxlength="50" required>
@@ -47,10 +48,10 @@
                     <input name="campoEndereco" type="text" placeholder="Endereço" maxlength="50" required>
                 </div>
                 <div class="divCampo">
-                    <input name="campoDataStatus" type="text" placeholder="Data da perda/Data de encontro" maxlength="50" required>
+                    <input name="campoDataStatus" type="date" placeholder="Data da perda/Data de encontro" maxlength="50" required>
                 </div>
                 <div class="divCampo">
-                    <input name="campoDataNasc" type="text" placeholder="Data de nascimento do animal" maxlength="50">
+                    <input name="campoDataNasc" type="date" placeholder="Data de nascimento do animal" maxlength="50">
                 </div>
                 <div class="divImagem">
                     <input name="campoFoto" type="file" accept="imagem/*" maxlength="50">
