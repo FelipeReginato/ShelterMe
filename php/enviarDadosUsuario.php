@@ -3,7 +3,7 @@ require 'conectarBD.php';
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
-$senha = $_POST['senha'];
+$senha = md5($_POST['senha']);
 
 $conn = mysqli_connect($servername, $username, $password, $database);
 
