@@ -15,18 +15,18 @@ if (!$conn) {
 }
 
 
-$sqlD = "SELECT CodUsuario, NomeUsuario FROM Usuario";
-$sqlP = "SELECT CodAnimal, Nome FROM Animal";
+$sqlU = "SELECT CodUsuario, NomeUsuario FROM Usuario";
+$sqlA = "SELECT CodAnimal, Nome FROM Animal";
 				
 $optionsUsu = array();
 $optionsAni = array();
 				
-if ($result = mysqli_query($conn, $sqlD)) {
+if ($result = mysqli_query($conn, $sqlU)) {
 while ($row = mysqli_fetch_assoc($result)) {
 		array_push($optionsUsu, "\t\t\t<option value='". $row["CodUsuario"]."'>".$row["NomeUsuario"]."</option>\n");
 	}
 }
-if ($result = mysqli_query($conn, $sqlP)) {
+if ($result = mysqli_query($conn, $sqlA)) {
 	while ($row = mysqli_fetch_assoc($result)) {
         array_push($optionsAni, "\t\t\t<option value='". $row["CodAnimal"]."'>".$row["Nome"]."</option>\n");
 	}
