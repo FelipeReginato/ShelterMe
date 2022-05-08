@@ -60,14 +60,14 @@ if ($result = mysqli_query($conn, $sql)) {
     ?>
     
     <script>
-    window.location.replace("../paginas/paginaMenuPrincipal.html");
+    window.location.replace("../paginas/paginaAnimal.html");
     alert("Novo animal registrado!");
     </script>
     <?php
 } else {
     ?>
     <script>
-    window.location.replace("../paginas/telaLogin.html");
+    window.location.replace("../paginas/paginaAnimal.html");
     alert("<?php echo "Erro executando INSERT: " . mysqli_error($conn);?>");
     </script>
     <?php
