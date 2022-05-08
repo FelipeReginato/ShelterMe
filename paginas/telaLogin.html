@@ -19,11 +19,15 @@
                 <div class="LinhaBemVindo"></div>
                 
                 <form action="../php/enviarDadosUsuario.php" method="post">
-                    <input  type="text" placeholder="Usuário" minlength="5" maxlength="25" name="nome" required > <br>
+                    <input  type="text" placeholder="Usuário" minlength="4" maxlength="40" name="nome" required > <br>
 
-                    <input  type="text" placeholder="E-mail" minlength="5" maxlength="25" name="email" required > <br>
+                    <input  type="text" placeholder="E-mail" maxlength="60" name="email" 
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    title="E-mail inválido, exemplo: exemplo@exemplo.com" required > <br>
 
-                    <input  type="password" placeholder="Senha" minlength="5" maxlength="15" name="senha" required> <br>
+                    <input  type="password" placeholder="Senha" maxlength="40" name="senha" 
+                    pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,40}" 
+                    title="Senha entre 6 e 40 caracteres, com letra maiúscula, minúscula e número" required> <br>
 
                     <button> Entrar </button>
                 </form>

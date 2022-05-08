@@ -6,6 +6,10 @@
         
 </head>
 <body>
+    <div>
+        <button onclick="location.href='criarPublicacao.php'">Criar nova publicação</button>
+        <button onclick="location.href='../paginas/paginaMenuPrincipal.html'">Voltar</button>
+    </div><br>
 <?php
 require 'conectarBD.php';
 $conn = mysqli_connect($servername, $username, $password, $database);
@@ -16,47 +20,121 @@ if (!$conn) {
 
 
 
-$result = mysqli_query($conn,"SELECT * FROM Animal");
+$result = mysqli_query($conn,"SELECT * FROM animal WHERE CodAnimal IN (SELECT CodAnimal FROM postagem)");
+$resultU = mysqli_query($conn,"SELECT * FROM usuario WHERE CodUsuario IN (SELECT CodUsuario FROM postagem)");
+$rowU = mysqli_fetch_assoc($resultU);
 
 while ($row = mysqli_fetch_assoc($result)) {
-    echo "<table>";
-    echo "<tr>";
-    echo "<td>";
-    echo $row["CodAnimal"];
-    echo "</td><td>";
-    echo $row["Especie"];
-    echo "</td><td>";
-    echo $row["Raca"];
-    echo "</td><td>";
-    echo $row["Porte"];
-    echo "</td><td>";
-    echo $row["Peso"];
-    echo "</td><td>";
-    echo $row["Sexo"];
-    echo "</td><td>";
-    echo $row["Estado"];
-    echo "</td><td>";
-    echo $row["Cidade"];
-    echo "</td><td>";
-    echo $row["Status"];
-    echo "</td><td>";
-    echo $row["DataStatus"];
-    echo "</td><td>";
-    echo $row["DataNasc"];
-    echo "</td>";
-    if ($row['Foto']) { ?>
-        <td style="text-align:left">
-            <img class="imagemSelecionada" src="data:image/png;base64,<?= base64_encode($row['FotoBin']) ?>" />
-        </td>
-        <?php
-    } else {
-        ?>
-        <td style="text-align:left">
-            <img class="imagemSelecionada" src="../imagens/foto.png" />
-        </td>
-        <?php
-    }
+    $strData = explode('-',$row["DataNasc"]);
+    $ano = $strData[2];
+	$mes = $strData[1];
+	$dia = $strData[0];
+
+	$dataFinalNasc = $dia.'/'.$mes.'/'.$ano;
+    $strData = explode('-',$row["DataStatus"]);
+    $ano = $strData[2];
+	$mes = $strData[1];
+	$dia = $strData[0];
+
+	$dataFinalStatus = $dia.'/'.$mes.'/'.$ano;
+    ?> 
+    <table>
+    <tr>
+    <td>
     
+    <label><b>Contato:</b></label>
+    <?php echo $rowU["Email"]; ?> 
+    </td><td>
+    
+    <label><b>Nome:</b></label>
+    <?php echo $row["Nome"]; ?> 
+    </td><td>
+    
+    <label><b>Especie:</b></label>
+    <?php echo $row["Especie"]; ?> 
+    </td><td>
+    
+    <label><b>Raça:</b></label>
+    <?php echo $row["Raca"]; ?> 
+    </td><td>
+    
+    <label><b>Porte:</b></label>
+    <?php echo $row["Porte"]; ?> 
+    </td><td>
+    
+    <label><b>Peso:</b></label>
+    <?php echo $row["Peso"]; ?> 
+    </td><td>
+    
+    <label><b>Sexo:</b></label>
+    <?php echo $row["Sexo"]; ?> 
+    
+    </td><td>
+    
+    <label><b>Estado:</b></label>
+    <?php echo $row["Estado"]; ?> 
+    </td><td>
+    
+    <label><b>Cidade:</b></label>
+    <?php echo $row["Cidade"]; ?> 
+    </td><td>
+    
+    <label><b>Status:</b></label>
+    <?php echo $row["Status"]; ?> 
+    </td><td>
+    
+    <label><b>Data Perda/Encontro:</b></label>
+    <?php echo $dataFinalStatus; ?> 
+    
+    </td><td>
+    
+    <label><b>Data de Nascimento:</b></label>
+    <?php echo $dataFinalNasc; ?>
+    
+    </td><td>
+
+    <script>
+        function validarDelete(){
+            let confirma = confirm("Você deseja mesmo apagar a publicação de <?php echo $row["Nome"]; ?>?");
+            if (confirma){
+            return true;
+        }else{
+            return false;
+        }
+        }
+        function validarSolucionar(){
+            let confirma = 
+            confirm("Você deseja alterar o registro de <?php echo $row["Nome"];?> para solucionado (registro desse animal não estará mais disponível) e apagar está postagem?");
+        if (confirma){
+            return true;
+        }else{
+            return false;
+        }
+        }
+        
+    </script>
+
+    <form action="updatePublicacao.php" method="post">
+    <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
+    <input type="hidden" name="idU" value="<?php echo $rowU["CodUsuario"]; ?>">
+    <button>Editar</button>
+    </form>
+
+    </td><td>
+    <form action="deletarPublicacao.php" name="formDelete" method="post">
+    <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
+    <button onclick="return validarDelete()">Excluir</button>
+    </form>
+
+    </td><td>
+    <form action="solucionarPublicacao.php" name="formSolucionar" method="post">
+    <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
+    <button onclick="return validarSolucionar()">Solucionado</button>
+    </form>
+
+    </td>
+    </tr>
+	<?php
 }
 mysqli_close($con);
 ?>

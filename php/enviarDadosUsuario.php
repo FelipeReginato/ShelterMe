@@ -15,9 +15,20 @@ if (!$conn) {
 $sql = "INSERT INTO usuario (NomeUsuario,Email,Senha) VALUES ('$nome','$email','$senha')";
 
 if ($result = mysqli_query($conn, $sql)) {
-    echo "Novo registro adicionado";
+    ?>
+    
+    <script>
+    window.location.replace("../paginas/paginaMenuPrincipal.html");
+    alert("Novo usuário registrado!");
+    </script>
+    <?php
 } else {
-    echo "Erro executando INSERT: " . mysqli_error($conn);
+    ?>
+    <script>
+    window.location.replace("../paginas/paginaMenuPrincipal.html");
+    alert("<?php echo "Erro executando INSERT: " . mysqli_error($conn);?>");
+    </script>
+    <?php
 }
 
 mysqli_close($conn);

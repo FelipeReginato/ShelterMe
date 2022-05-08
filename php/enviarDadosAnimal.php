@@ -12,6 +12,39 @@ $endereco = $_POST['campoEndereco'];
 $status = $_POST['campoStatus'];
 $dataStatus = $_POST['campoDataStatus'];
 $dataNasc = $_POST['campoDataNasc'];
+$nome = $_POST['campoNome'];
+
+
+
+if($dataNasc != ""){
+    if (strpos($dataNasc,"-") != false){
+        $strData = explode('-',$dataNasc);
+    }else{
+        $strData = explode('/',$dataNasc);
+    }
+    $ano = $strData[2];
+	$mes = $strData[1];
+	$dia = $strData[0];
+
+	$novaDataNasc = $ano.'-'.$mes.'-'.$dia;
+}else{
+    $novaDataNasc = "";
+}
+
+if($dataStatus != ""){
+    if (strpos($dataStatus,"-") != false){
+        $strData = explode('-',$dataStatus);
+    }else{
+        $strData = explode('/',$dataStatus);
+    }
+    $ano = $strData[2];
+	$mes = $strData[1];
+	$dia = $strData[0];
+
+	$novaDataStatus = $ano.'-'.$mes.'-'.$dia;
+}else{
+    $novaDataStatus = "";
+}
 
 
 $conn = mysqli_connect($servername, $username, $password, $database);
@@ -20,14 +53,24 @@ if (!$conn) {
     die("Falha na conexão com o Banco de Dados: " . mysqli_connect_error());
 }
 
-
-$sql = "INSERT INTO animal (Especie, Raca, Sexo, Porte, Peso, Status, DataStatus, DataNasc, Estado, Cidade, Endereco) 
-VALUES ('$especie','$raca','$sexo','$porte','$peso','$status','$dataStatus','$dataNasc','$estado','$cidade','$endereco')";
+$sql = "INSERT INTO animal (Especie, Raca, Sexo, Porte, Peso, Status, DataStatus, DataNasc, Estado, Cidade, Endereco, Nome) 
+    VALUES ('$especie','$raca','$sexo','$porte','$peso','$status','$novaDataStatus','$novaDataNasc','$estado','$cidade','$endereco','$nome')";
 
 if ($result = mysqli_query($conn, $sql)) {
-    echo "Novo registro adicionado";
+    ?>
+    
+    <script>
+    window.location.replace("../paginas/paginaMenuPrincipal.html");
+    alert("Novo animal registrado!");
+    </script>
+    <?php
 } else {
-    echo "Erro executando INSERT: " . mysqli_error($conn);
+    ?>
+    <script>
+    window.location.replace("../paginas/telaLogin.html");
+    alert("<?php echo "Erro executando INSERT: " . mysqli_error($conn);?>");
+    </script>
+    <?php
 }
 
 mysqli_close($conn);
