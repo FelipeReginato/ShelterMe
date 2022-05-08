@@ -10,6 +10,26 @@
         <button onclick="location.href='criarPublicacao.php'">Criar nova publicação</button>
         <button onclick="location.href='../paginas/paginaMenuPrincipal.html'">Voltar</button>
     </div><br>
+    <script>
+        function validarDelete(){
+            let confirma = confirm("Você deseja mesmo apagar a publicação de <?php echo $row["Nome"]; ?>?");
+            if (confirma){
+            return true;
+        }else{
+            return false;
+        }
+        }
+        function validarSolucionar(){
+            let confirma = 
+            confirm("Você deseja alterar o registro de <?php echo $row["Nome"];?> para solucionado (registro desse animal não estará mais disponível) e apagar está postagem?");
+        if (confirma){
+            return true;
+        }else{
+            return false;
+        }
+        }
+        
+    </script>
 <?php
 require 'conectarBD.php';
 $conn = mysqli_connect($servername, $username, $password, $database);
@@ -82,6 +102,10 @@ while ($row = mysqli_fetch_assoc($result)) {
     <label><b>Status:</b></label>
     <?php echo $row["Status"]; ?> 
     </td><td>
+
+    <label><b>Endereço:</b></label>
+    <?php echo $row["Endereco"]; ?> 
+    </td><td>
     
     <label><b>Data Perda/Encontro:</b></label>
     <?php echo $dataFinalStatus; ?> 
@@ -93,26 +117,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     
     </td><td>
 
-    <script>
-        function validarDelete(){
-            let confirma = confirm("Você deseja mesmo apagar a publicação de <?php echo $row["Nome"]; ?>?");
-            if (confirma){
-            return true;
-        }else{
-            return false;
-        }
-        }
-        function validarSolucionar(){
-            let confirma = 
-            confirm("Você deseja alterar o registro de <?php echo $row["Nome"];?> para solucionado (registro desse animal não estará mais disponível) e apagar está postagem?");
-        if (confirma){
-            return true;
-        }else{
-            return false;
-        }
-        }
-        
-    </script>
+    
 
     <form action="updatePublicacao.php" method="post">
     <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
