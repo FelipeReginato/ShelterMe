@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <div class="divLogo"  onclick="location.href='../paginas/paginaMenuPrincipal.html'">
+    <div class="divLogo"  onclick="location.href=''">
     </div>
     <div class="divBotao">
         <button class="botaoPublicar" onclick="location.href='criarPublicacao.php'">Criar nova publicação</button>
