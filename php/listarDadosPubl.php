@@ -37,80 +37,84 @@ while ($row = mysqli_fetch_assoc($result)) {
 	$dia = $strData[0];
 
 	$dataFinalStatus = $dia.'/'.$mes.'/'.$ano;
-    echo "<table>";
-    echo "<tr>";
-    echo "<td>";
     ?> 
+    <table>
+    <tr>
+    <td>
+    
     <label><b>Contato:</b></label>
-    <?php
-    echo $rowU["Email"];
-    echo "</td><td>";
-    ?> 
+    <?php echo $rowU["Email"]; ?> 
+    </td><td>
+    
     <label><b>Nome:</b></label>
-    <?php
-    echo $row["Nome"];
-    echo "</td><td>";
-    ?> 
+    <?php echo $row["Nome"]; ?> 
+    </td><td>
+    
     <label><b>Especie:</b></label>
-    <?php
-    echo $row["Especie"];
-    echo "</td><td>";
-    ?> 
+    <?php echo $row["Especie"]; ?> 
+    </td><td>
+    
     <label><b>Raça:</b></label>
-    <?php
-    echo $row["Raca"];
-    echo "</td><td>";
-    ?> 
+    <?php echo $row["Raca"]; ?> 
+    </td><td>
+    
     <label><b>Porte:</b></label>
-    <?php
-    echo $row["Porte"];
-    echo "</td><td>";
-    ?> 
+    <?php echo $row["Porte"]; ?> 
+    </td><td>
+    
     <label><b>Peso:</b></label>
-    <?php
-    echo $row["Peso"];
-    echo "</td><td>";
-    ?> 
+    <?php echo $row["Peso"]; ?> 
+    </td><td>
+    
     <label><b>Sexo:</b></label>
-    <?php
-    echo $row["Sexo"];
-    echo "</td><td>";
-    ?> 
+    <?php echo $row["Sexo"]; ?> 
+    
+    </td><td>
+    
     <label><b>Estado:</b></label>
-    <?php
-    echo $row["Estado"];
-    echo "</td><td>";
-    ?> 
+    <?php echo $row["Estado"]; ?> 
+    </td><td>
+    
     <label><b>Cidade:</b></label>
-    <?php
-    echo $row["Cidade"];
-    echo "</td><td>";
-    ?> 
+    <?php echo $row["Cidade"]; ?> 
+    </td><td>
+    
     <label><b>Status:</b></label>
-    <?php
-    echo $row["Status"];
-    echo "</td><td>";
-    ?> 
+    <?php echo $row["Status"]; ?> 
+    </td><td>
+    
     <label><b>Data Perda/Encontro:</b></label>
-    <?php
-    echo $dataFinalStatus;
-    echo "</td><td>";
-    ?> 
+    <?php echo $dataFinalStatus; ?> 
+    
+    </td><td>
+    
     <label><b>Data de Nascimento:</b></label>
-    <?php
-    echo $dataFinalNasc;
-    echo "</td><td>";
-    ?>
+    <?php echo $dataFinalNasc; ?>
+    
+    </td><td>
+
+    <script>
+        function validarDelete(){
+            let confirma = confirm("Você deseja mesmo apagar a publicação de <?php echo $row["Nome"]; ?>");
+            if (confirma){
+            return true;
+        }else{
+            return false;
+        }
+        }
+        
+    </script>
 
     <form action="updatePublicacao.php" method="post">
     <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
     <input type="hidden" name="idU" value="<?php echo $rowU["CodUsuario"]; ?>">
     <button>Editar</button>
     </form>
+
     </td><td>
-    <form action="deletarPublicacao.php" method="post">
+    <form action="deletarPublicacao.php" name="formDelete" method="post">
     <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
-    <button>Excluir</button>
+    <button onclick="return validarDelete()">Excluir</button>
     </form>
     </td>
     </tr>

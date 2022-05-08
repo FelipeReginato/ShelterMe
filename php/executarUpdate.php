@@ -22,7 +22,39 @@ $id = $_POST['id'];
 $idU = $_POST['idU'];
 $email = $_POST['email'];
 
-$sql = "UPDATE animal SET Especie = '$especie', Raca = '$raca', Sexo = '$sexo', Porte = '$porte' WHERE CodAnimal = '$id'";
+if($dataNasc != ""){
+    if (strpos($dataNasc,"-") != false){
+        $strData = explode('-',$dataNasc);
+    }else{
+        $strData = explode('/',$dataNasc);
+    }
+    $ano = $strData[2];
+	$mes = $strData[1];
+	$dia = $strData[0];
+
+	$novaDataNasc = $ano.'-'.$mes.'-'.$dia;
+}else{
+    $novaDataNasc = "";
+}
+
+if($dataStatus != ""){
+    if (strpos($dataStatus,"-") != false){
+        $strData = explode('-',$dataStatus);
+    }else{
+        $strData = explode('/',$dataStatus);
+    }
+    $ano = $strData[2];
+	$mes = $strData[1];
+	$dia = $strData[0];
+
+	$novaDataStatus = $ano.'-'.$mes.'-'.$dia;
+}else{
+    $novaDataStatus = "";
+}
+
+$sql = "UPDATE animal SET Especie = '$especie', Raca = '$raca', Sexo = '$sexo', Porte = '$porte', Peso = '$peso', 
+    Estado = '$estado', Cidade = '$cidade', Endereco = '$endereco', Status = '$status', DataStatus = '$dataStatus', 
+    DataNasc = '$dataNasc', Nome = '$nome' WHERE CodAnimal = '$id'";
 
 
 $sqlU = "UPDATE usuario SET Email='$email' WHERE CodUsuario = '$idU'";

@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
         <link rel="stylesheet" href="../css/estilosPubl.css">
-        
 </head>
 <body>
 <?php
@@ -23,6 +22,19 @@ $row = mysqli_fetch_assoc($result);
 $rowU = mysqli_fetch_assoc($resultU);
 
 ?>
+
+<script>
+    function validarUpdate(){
+        let confirma = confirm("Você deseja mesmo atualizar a publicação de <?php echo $row["Nome"]; ?>");
+        if (confirma){
+            return true;
+        }else{
+            return false;
+        }
+}
+        
+</script>
+
 <form action="executarUpdate.php" method="post">
 
 <input type="hidden" name="id" value="<?php echo $id; ?>">
@@ -45,9 +57,23 @@ pattern="[a-zA-Z]{5,40}" title="Raça entre 5 e 40 letras" required><br>
 <label for="selectSexo">Sexo do animal:</label>
 <select name="campoSexo" id="selectSexo" required>
     <option value="<?php echo $row["Sexo"];?>"><?php echo $row["Sexo"];?></option>
-    <option value="Macho">Macho</option>
+    <?php if($row["Sexo"] == "Macho"){
+        ?>
+        <option value="Fêmea">Fêmea</option>
+        <option value="Desconhecido">Não Sei</option>
+        <?php
+    }else if($row["Sexo"] == "Fêmea"){
+        ?>
+        <option value="Macho">Macho</option>
+        <option value="Desconhecido">Não Sei</option>
+        <?php
+    }else{
+    ?>
+    <option value="Macho">Macho</option>    
     <option value="Fêmea">Fêmea</option>
-    <option value="Desconhecido">Não Sei</option>
+    <?php
+   } 
+   ?>    
 </select><br>
 
 <input name="campoPorte" type="text" placeholder="Porte" maxlength="50" 
@@ -59,9 +85,18 @@ value="<?php echo $row["Peso"]; ?>" maxlength="20"><br>
 
 <label for="selectStatus">Status do animal:</label>
 <select name="campoStatus" id="selectStatus" required>
-    <option value="<?php echo $row["Status"]; ?>"><?php echo $row["DataStatus"]; ?></option>
-    <option value="Perdido">Perdido</option>
-    <option value="Encontrado">Encontrado</option>
+    <option value="<?php echo $row["Status"]; ?>"><?php echo $row["Status"]; ?></option>
+    <?php if($row["Status"] == "Perdido"){
+        ?>
+        <option value="Encontrado">Encontrado</option>
+        <?php
+    }else{
+        ?>
+        <option value="Perdido">Perdido</option>
+        <?php
+    } ?>
+    
+    
 </select><br>
                 
 <input name="campoEstado" type="text" placeholder="Estado" maxlength="50" 
@@ -86,8 +121,9 @@ value="<?php echo $row["Endereco"]; ?>" required><br>
     onblur="(this.type='text')"
     value="<?php echo $row["DataStatus"]; ?>"><br>
 
-<button>Atualizar dados</button>
+<button onclick="return validarUpdate()">Atualizar dados</button>
 </form>
+
 <button onclick="location.href='listarDadosPubl.php'">Voltar</button>
 <?php
 mysqli_close($con);
