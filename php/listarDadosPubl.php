@@ -99,20 +99,9 @@ while ($row = mysqli_fetch_assoc($result)) {
     <label><b>Data de Nascimento:</b></label>
     <?php
     echo $dataFinalNasc;
-    echo "</td>";
-    if ($row['Foto']) { ?>
-        <td style="text-align:left">
-            <img class="imagemSelecionada" src="data:image/png;base64,<?= base64_encode($row['FotoBin']) ?>" />
-        </td>
-        <?php
-    } else {
-        ?>
-        <td style="text-align:left">
-            <img class="imagemSelecionada" src="../imagens/foto.png" />
-        </td><td>
-        <?php
-    }
+    echo "</td><td>";
     ?>
+
     <form action="updatePublicacao.php" method="post">
     <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
     <input type="hidden" name="idU" value="<?php echo $rowU["CodUsuario"]; ?>">
