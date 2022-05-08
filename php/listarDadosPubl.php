@@ -6,10 +6,14 @@
         
 </head>
 <body>
-    <div>
-        <button onclick="location.href='criarPublicacao.php'">Criar nova publicação</button>
-        <button onclick="location.href='../paginas/paginaMenuPrincipal.html'">Voltar</button>
-    </div><br>
+    
+    <div class="divLogo"  onclick="location.href='../paginas/paginaMenuPrincipal.html'">
+    </div>
+    <div class="divBotao">
+        <button class="botaoPublicar" onclick="location.href='criarPublicacao.php'">Criar nova publicação</button>
+    </div>
+
+
     <script>
         function validarDelete(){
             let confirma = confirm("Você deseja mesmo apagar a publicação de <?php echo $row["Nome"]; ?>?");
@@ -58,87 +62,101 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 	$dataFinalStatus = $dia.'/'.$mes.'/'.$ano;
     ?> 
-    <table>
-    <tr>
-    <td>
-    
-    <label><b>Contato:</b></label>
-    <?php echo $rowU["Email"]; ?> 
-    </td><td>
-    
-    <label><b>Nome:</b></label>
-    <?php echo $row["Nome"]; ?> 
-    </td><td>
-    
-    <label><b>Especie:</b></label>
-    <?php echo $row["Especie"]; ?> 
-    </td><td>
-    
-    <label><b>Raça:</b></label>
-    <?php echo $row["Raca"]; ?> 
-    </td><td>
-    
-    <label><b>Porte:</b></label>
-    <?php echo $row["Porte"]; ?> 
-    </td><td>
-    
-    <label><b>Peso:</b></label>
-    <?php echo $row["Peso"]; ?> 
-    </td><td>
-    
-    <label><b>Sexo:</b></label>
-    <?php echo $row["Sexo"]; ?> 
-    
-    </td><td>
-    
-    <label><b>Estado:</b></label>
-    <?php echo $row["Estado"]; ?> 
-    </td><td>
-    
-    <label><b>Cidade:</b></label>
-    <?php echo $row["Cidade"]; ?> 
-    </td><td>
-    
-    <label><b>Status:</b></label>
-    <?php echo $row["Status"]; ?> 
-    </td><td>
 
-    <label><b>Endereço:</b></label>
-    <?php echo $row["Endereco"]; ?> 
-    </td><td>
-    
-    <label><b>Data Perda/Encontro:</b></label>
-    <?php echo $dataFinalStatus; ?> 
-    
-    </td><td>
-    
-    <label><b>Data de Nascimento:</b></label>
-    <?php echo $dataFinalNasc; ?>
-    
-    </td><td>
+        <table class="tableDados"> 
+        <tr class="trDados">
 
-    
+        <td class= "tdDados">
+        <label><b>Contato:</b></label>
+        <?php echo $rowU["Email"]; ?> 
+        </td>
+        
+        <td class= "tdDados">
+        <label><b>Nome:</b></label>
+        <?php echo $row["Nome"]; ?> 
+        </td>
+        
+        <td class= "tdDados">
+        <label><b>Especie:</b></label>
+        <?php echo $row["Especie"]; ?> 
+        </td>
+        
+        <td class= "tdDados">
+        <label><b>Raça:</b></label>
+        <?php echo $row["Raca"]; ?> 
+        </td>
+        
+        <td class= "tdDados">
+        <label><b>Porte:</b></label>
+        <?php echo $row["Porte"]; ?> 
+        </td>
+        
+        <td class= "tdDados">
+        <label><b>Peso:</b></label>
+        <?php echo $row["Peso"]; ?> 
+        </td>
+        
+        <td class= "tdDados">
+        <label><b>Sexo:</b></label>
+        <?php echo $row["Sexo"]; ?> 
+        </td>
+        
+        <td class= "tdDados">
+        <label><b>Estado:</b></label>
+        <?php echo $row["Estado"]; ?> 
+        </td>
+        
+        <td class= "tdDados">
+        <label><b>Cidade:</b></label>
+        <?php echo $row["Cidade"]; ?> 
+        </td>
+        
+        <td class= "tdDados">
+        <label><b>Status:</b></label>
+        <?php echo $row["Status"]; ?> 
+        </td>
+        
+        <td class= "tdDados">
+        <label><b>Endereço:</b></label>
+        <?php echo $row["Endereco"]; ?> 
+        </td>
+        
+        <td class= "tdDados">
+        <label><b>Data Perda/Encontro:</b></label>
+        <?php echo $dataFinalStatus; ?> 
+        </td>
 
-    <form action="updatePublicacao.php" method="post">
-    <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
-    <input type="hidden" name="idU" value="<?php echo $rowU["CodUsuario"]; ?>">
-    <button>Editar</button>
-    </form>
+        <td class= "tdDados">
+        
+        <label><b>Data de Nascimento:</b></label>
+        <?php echo $dataFinalNasc; ?>
+        </td>
+        
+        <td class= "tdDadosAcao">
+        <form action="updatePublicacao.php" method="post">
+        <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
+        <input type="hidden" name="idU" value="<?php echo $rowU["CodUsuario"]; ?>">
+        <button class="botaoEditar" >Editar</button>
+        </form>
+        </td> 
+        
+        <td class= "tdDadosAcao">
+        <form action="deletarPublicacao.php" name="formDelete" method="post">
+        <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
+        <button class="botaoExcluir" onclick="return validarDelete()">Excluir</button>
+        </form>
+        </td>
+        
+        <td class= "tdDadosAcao">
+        <form action="solucionarPublicacao.php" name="formSolucionar" method="post">
+        <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
+        <button class="botaoSolucionado" onclick="return validarSolucionar()">Solucionado</button>
+        </form>
+        </td>
+        </tr>
+        
+        </table>
 
-    </td><td>
-    <form action="deletarPublicacao.php" name="formDelete" method="post">
-    <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
-    <button onclick="return validarDelete()">Excluir</button>
-    </form>
-
-    </td><td>
-    <form action="solucionarPublicacao.php" name="formSolucionar" method="post">
-    <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
-    <button onclick="return validarSolucionar()">Solucionado</button>
-    </form>
-
-    </td>
-    </tr>
 	<?php
 }
 mysqli_close($con);
