@@ -11,26 +11,30 @@
     <div class="divCampo">
         <form action="../php/enviarDadosAnimal.php" method="post">
                
-                    <input name="campoNome" type="text" placeholder="Nome do Animal" maxlength="50" required>
+                    <input name="campoNome" type="text" placeholder="Nome do Animal" minlength="3" maxlength="60" required>
                 
                 
-                    <input name="campoEspecie" type="text" placeholder="Espécie" maxlength="50" 
-                    pattern="[a-zA-Z\s]{10,50}" title="Espécie entre 10 e 50 letras" required>
+                    <input name="campoEspecie" type="text" placeholder="Espécie" maxlength="70" 
+                    pattern="[a-zA-Z\s]{10,70}" title="Espécie entre 10 e 70 letras" required>
                 
-                    <input name="campoRaca" type="text" placeholder="Raça" maxlength="50" required>
+                    <input name="campoRaca" type="text" placeholder="Raça" maxlength="40" 
+                    pattern="[a-zA-Z]{5,40}" title="Raça entre 5 e 40 letras"required>
                 
                 
-                    <input name="campoPorte" type="text" placeholder="Porte" maxlength="50" required>
+                    <input name="campoPorte" type="text" placeholder="Porte" maxlength="40"
+                    pattern="[a-zA-Z]{5,40}" title="Porte entre 5 e 40 letras" required>
               
           
-                    <input name="campoPeso" type="text" placeholder="Peso (Opcional)" maxlength="50">
-                    <input name="campoEstado" type="text" placeholder="Estado" maxlength="50" required>
+                    <input name="campoPeso" type="text" placeholder="Peso (Opcional)" maxlength="20">
+                    <input name="campoEstado" type="text" placeholder="Estado" maxlength="30" 
+                    pattern="[a-zA-Z]{5,30}" title="Estado entre 5 e 30 letras" required>
                     <input id = "troca1" onclick="trocaDate1()" onblur="trocaText1()" name="campoDataNasc" type="text" placeholder="Data de nascimento do animal" maxlength="50">
                     <input id = "troca2" onclick="trocaDate2()" onblur="trocaText2()" name="campoDataStatus" type="text" placeholder="Data da perda/Data de encontro" maxlength="50">
 
-                    <input name="campoCidade" type="text" placeholder="Cidade" maxlength="50" required>
+                    <input name="campoCidade" type="text" placeholder="Cidade" maxlength="40"
+                    pattern="[a-zA-Z]{5,40}" title="Cidade entre 5 e 40 letras" required>
                 
-                    <input name="campoEndereco" type="text" placeholder="Endereço" maxlength="50" required>
+                    <input name="campoEndereco" type="text" placeholder="Endereço" minlenght="8" maxlength="50" required>
 
                    
             

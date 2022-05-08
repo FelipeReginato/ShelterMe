@@ -4,45 +4,74 @@ body{
     background-repeat: no-repeat;
 }
 
+.divCampo{
+
+    
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 15px;
+    background-color:rgba(255, 255, 255, 0.6);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+}
+input {
+
+    width: 42%;
+    border: 2px solid #FF914D;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 15px;
+    padding: 10px;
+    outline: 0px;
+
+}
+
+.inputEmail {
+
+    width: 91%;
+}
 
 .divSelect{
     
-    
+    width: 41.5%;
     background-color: #FF914D;
-    padding: 9px;
+    padding: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border: 2px solid black;
     border-radius: 10px;
     margin-top: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
-    font-size: 20px;
+    margin-left: 20px;
+    float: left;
     
     
 }
-
-input {
-    position:relative;
-    width: 476px;
-    border: 2px solid #FF914D;
-    border-radius: 10px;
-    margin-left: 50px;
-    margin-right: 100px;
-    margin-top: 15px;
-    padding: 10px;
-    outline: 0px;
-    ;
-}
-
 select{
 
-    width: 275px;
+    width: 150px;
     height: 25px;
     background-image: url(../imagens/patinhas.jpg);
     background-size: 50px;
     background-repeat: repeat;
-    margin-left:24%;
+    float: right;
+   
 }
+
+.botaoEnviar{
+
+    width: 85%;
+    border: 2px solid #FF914D;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+}
+
 
 ::placeholder{
 
@@ -51,27 +80,13 @@ select{
 
 }
 
-.divCampo{
 
 
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 70px;
-    border-radius: 15px;
-    background-color:rgba(255, 255, 255, 0.6);
-    padding-top: 25px;
-    padding-bottom: 25px;
-    
-}
 
-.selectAnimal{
-    margin-left:25%;
-}
 
-.botaoPublicar{
+.botaoAtualizar{
     border-left: 10px;
-    margin-left: 50px;
+    margin-left: 90px;
     margin-top: 25px;
     padding: 15px;
     width: 503px;
@@ -85,9 +100,9 @@ select{
 
 .botaoVoltar{
     border-left: 10px;
-    margin-left: 50px;
+    margin-left: 90px;
     margin-top: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding: 15px;
     width: 503px;
     background-color: #af5f00;
@@ -96,7 +111,8 @@ select{
     color: white;
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}  
+} 
+
 button:hover{
 
     background-color: white;
@@ -104,12 +120,11 @@ button:hover{
     border: 2px solid #FF914D;
     cursor: pointer;
 }
-   
-.divPublicacao{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 70px;
-    text-align: center;
-    margin-top: 60px;
-    color: black;
 
+.divAtualizar{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
 }

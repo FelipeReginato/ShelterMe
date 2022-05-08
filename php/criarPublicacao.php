@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 	<link rel="stylesheet" href="../css/estilosCriarPubl.css">
+	<script src="../Scripts/scriptsPaginaAnimal.js"></script>
         
 </head>
 <body>
@@ -42,31 +43,47 @@ echo "</div>";
 mysqli_close($conn);
 if (!(sizeof($optionsUsu) == 0 || sizeof($optionsAni) == 0)){
 	?>
+	<div class="divPublicacao">Criar Publicação</div>
+	<div class="divCampo">
 	<form action="enviarPublicacao.php" method="post">
-		<label>Usuario</label>
+	
+                
+	 
+	<div class="divSelect">
+		<label>Usuário</label>
 			<select name="codUsu" required>
 				<option value=""></option>
 			<?php
-			foreach($optionsUsu as $key => $value){
-				echo $value;
-			}
+				foreach($optionsUsu as $key => $value){
+					echo $value;
+				}
 			?>
-			</select><br>
-			<label>Animal</label>
-			<select name="codAni" required>
+			</select>
+		</div>
+			
+			
+	<div class="divSelect">
+		<label>Animal</label>
+			<select class="selectAnimal" name="codAni" required>
 				<option value=""></option>
 			<?php
 				foreach($optionsAni as $key => $value){
 					echo $value;
 				}
-				?>
-				</select><br>
-			   
+			?>
+			</select>
+		</div>
+		
+			
 	<input name="nome" type="text" placeholder="Nome Completo" maxlength="60" 
     pattern="[a-zA-Z\s]{5,60}" title="Nome completo entre 5 e 60 letras" required>
 			   
-	<button> Publicar </button>
+	<button class="botaoPublicar"> Publicar </button>
 	</form>
+	</div>
+	<button class="botaoVoltar" onclick="location.href='listarDadosPubl.php'"> Voltar</button>
+
+	
 	   
 	   <?php
    } 

@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/estilosPubl.css">
+        <link rel="stylesheet" href="../css/estiloUpdtPubl.css">
+        <script src="../Scripts/scriptsPaginaAnimal.js"></script>
 </head>
 <body>
 <?php
@@ -35,25 +36,56 @@ $rowU = mysqli_fetch_assoc($resultU);
         
 </script>
 
+<div class="divAtualizar">Atualizar Dados</div>
+<div class="divCampo">
 <form action="executarUpdate.php" method="post">
 
 <input type="hidden" name="id" value="<?php echo $id; ?>">
 
 <input type="hidden" name="idU" value="<?php echo $idU; ?>">
 
-<input  type="text" placeholder="E-mail" minlength="5" maxlength="60" name="email" value="<?php echo $rowU["Email"];?>" 
+<input class="inputEmail" type="text" placeholder="E-mail" minlength="5" maxlength="60" name="email" value="<?php echo $rowU["Email"];?>" 
     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-    title="E-mail inválido, exemplo: exemplo@exemplo.com" required ><br>
+    title="E-mail inválido, exemplo: exemplo@exemplo.com" required >
+    
 
 <input name="campoNome" type="text" placeholder="Nome do animal" minlength="3" maxlength="60" 
-value="<?php echo $row["Nome"]; ?>" required><br>
+value="<?php echo $row["Nome"]; ?>" required>
 
 <input name="campoEspecie" type="text" placeholder="Espécie" value="<?php echo $row["Especie"];?>" maxlength="50" 
-    pattern="[a-zA-Z\s]{10,70}" title="Espécie entre 10 e 70 letras" required><br>
+    pattern="[a-zA-Z\s]{10,70}" title="Espécie entre 10 e 70 letras" required>
 
 <input name="campoRaca" type="text" placeholder="Raça" value="<?php echo $row["Raca"];?>" maxlength="50" 
-pattern="[a-zA-Z]{5,40}" title="Raça entre 5 e 40 letras" required><br>
+pattern="[a-zA-Z]{5,40}" title="Raça entre 5 e 40 letras" required>
 
+<input name="campoPorte" type="text" placeholder="Porte" maxlength="40" 
+pattern="[a-zA-Z]{5,40}" title="Porte entre 5 e 40 letras" 
+value="<?php echo $row["Porte"];?>" required>
+
+<input name="campoPeso" type="text" placeholder="Peso (Opcional)"
+value="<?php echo $row["Peso"]; ?>" maxlength="20">
+
+<input name="campoEstado" type="text" placeholder="Estado" maxlength="30" 
+pattern="[a-zA-Z]{5,30}" title="Estado entre 5 e 30 letras" 
+value="<?php echo $row["Estado"]; ?>" required>
+
+<input name="campoDataStatus" type="text" placeholder="Data da perda/Data de encontro" maxlength="50"
+    id = "troca2" onclick="trocaDate2()" onblur="trocaText2()"
+    value="<?php echo $row["DataStatus"]; ?>" required>
+                
+<input name="campoDataNasc" type="text" placeholder="Data de nascimento do animal" maxlength="50"
+    id = "troca1" onclick="trocaDate1()" onblur="trocaText1()"
+    value="<?php echo $row["DataStatus"]; ?>">
+                
+<input name="campoCidade" type="text" placeholder="Cidade" maxlength="40" 
+pattern="[a-zA-Z]{5,40}" title="Cidade entre 5 e 40 letras"
+value="<?php echo $row["Cidade"]; ?>" required>
+
+<input name="campoEndereco" type="text" placeholder="Endereço" 
+minlenght="8" maxlength="50"
+value="<?php echo $row["Endereco"]; ?>" required>
+
+<div class="divSelect">
 <label for="selectSexo">Sexo do animal:</label>
 <select name="campoSexo" id="selectSexo" required>
     <option value="<?php echo $row["Sexo"];?>"><?php echo $row["Sexo"];?></option>
@@ -74,15 +106,9 @@ pattern="[a-zA-Z]{5,40}" title="Raça entre 5 e 40 letras" required><br>
     <?php
    } 
    ?>    
-</select><br>
-
-<input name="campoPorte" type="text" placeholder="Porte" maxlength="50" 
-pattern="[a-zA-Z]{5,40}" title="Porte entre 5 e 40 letras" 
-value="<?php echo $row["Porte"];?>" required><br>
-
-<input name="campoPeso" type="text" placeholder="Peso (Opcional)"
-value="<?php echo $row["Peso"]; ?>" maxlength="20"><br>
-
+</select>
+</div>
+<div class="divSelect">
 <label for="selectStatus">Status do animal:</label>
 <select name="campoStatus" id="selectStatus" required>
     <option value="<?php echo $row["Status"]; ?>"><?php echo $row["Status"]; ?></option>
@@ -97,34 +123,15 @@ value="<?php echo $row["Peso"]; ?>" maxlength="20"><br>
     } ?>
     
     
-</select><br>
-                
-<input name="campoEstado" type="text" placeholder="Estado" maxlength="50" 
-pattern="[a-zA-Z]{5,30}" title="Estado entre 5 e 30 letras" 
-value="<?php echo $row["Estado"]; ?>" required><br>
+</select>
+</div>
 
-<input name="campoCidade" type="text" placeholder="Cidade" maxlength="50" 
-pattern="[a-zA-Z]{5,40}" title="Cidade entre 5 e 40 letras"
-value="<?php echo $row["Cidade"]; ?>" required><br>
-
-<input name="campoEndereco" type="text" placeholder="Endereço" 
-minlenght="8" maxlength="50"
-value="<?php echo $row["Endereco"]; ?>" required><br>
-
-<input name="campoDataStatus" type="text" placeholder="Data da perda/Data de encontro" maxlength="50"
-    onfocus="(this.type='date')" 
-    onblur="(this.type='text')" 
-    value="<?php echo $row["DataStatus"]; ?>" required><br>
-                
-<input name="campoDataNasc" type="text" placeholder="Data de nascimento do animal" maxlength="50"
-    onfocus="(this.type='date')" 
-    onblur="(this.type='text')"
-    value="<?php echo $row["DataStatus"]; ?>"><br>
-
-<button onclick="return validarUpdate()">Atualizar dados</button>
+<button class="botaoAtualizar" onclick="return validarUpdate()">Atualizar dados</button>
 </form>
+<button class="botaoVoltar" onclick="location.href='listarDadosPubl.php'">Voltar</button>
+</div>
 
-<button onclick="location.href='listarDadosPubl.php'">Voltar</button>
+
 <?php
 mysqli_close($con);
 ?>
