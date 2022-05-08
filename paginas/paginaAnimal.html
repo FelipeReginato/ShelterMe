@@ -1,51 +1,75 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/estilosCadastro.css">
+        <link rel="stylesheet" href="../css/estiloPaginaAnimal.css">
         
     </head>
     <body>
         
-        <div class="divAnimal">
-            <form action="../php/enviarDadosAnimal.php" method="post">
-                <div class="divCampo">
+    <div class="divCampo">
+        <form action="../php/enviarDadosAnimal.php" method="post">
+               
+                    <input name="campoNome" type="text" placeholder="Nome do Animal" maxlength="50" required>
+                
+                
                     <input name="campoEspecie" type="text" placeholder="Espécie" maxlength="50" 
                     pattern="[a-zA-Z\s]{10,50}" title="Espécie entre 10 e 50 letras" required>
-                </div>
-                <div class="divCampo">
+                
                     <input name="campoRaca" type="text" placeholder="Raça" maxlength="50" required>
-                </div>
-                <div class="divSelect">
-                    <label for="selectSexo">Sexo do animal:</label>
-                    <select name="campoSexo" id="selectSexo" required>
-                        <option></option>
-                        <option value="Macho">Macho</option>
-                        <option value="Fêmea">Fêmea</option>
-                        <option value="Desconhecido">Não Sei</option>
-                    </select>
-                </div>
-                <div class="divCampo">
+                
+                
                     <input name="campoPorte" type="text" placeholder="Porte" maxlength="50" required>
-                </div>
-                <div class="divCampo">
+              
+          
                     <input name="campoPeso" type="text" placeholder="Peso (Opcional)" maxlength="50">
-                </div>
-                <div class="divSelect">
-                    <label for="selectStatus">Status do animal:</label>
-                    <select name="campoStatus" id="selectStatus" required>
-                        <option></option>
-                        <option value="Perdido">Perdido</option>
-                        <option value="Encontrado">Encontrado</option>
-                    </select>
-                </div>
-                <div class="divCampo">
+               
+      
+                
                     <input name="campoEstado" type="text" placeholder="Estado" maxlength="50" required>
-                </div>
-                <div class="divCampo">
+               
                     <input name="campoCidade" type="text" placeholder="Cidade" maxlength="50" required>
-                </div>
-                <div class="divCampo">
+                
                     <input name="campoEndereco" type="text" placeholder="Endereço" maxlength="50" required>
+<<<<<<< HEAD
+                
+                    <input name="campoDataStatus" type="date" placeholder="Data da perda/Data de encontro" maxlength="50" required>
+              
+
+                    <input name="campoDataNasc" type="date" placeholder="Data de nascimento do animal (Opcional)" maxlength="50">
+
+          
+
+            
+            
+            <div class="divSelect">
+                <label for="selectSexo">Sexo do animal:</label>
+                <select name="campoSexo" id="selectSexo" required>
+                    <option></option>
+                    <option value="Macho">Macho</option>
+                    <option value="Fêmea">Fêmea</option>
+                    <option value="Desconhecido">Não Sei</option>
+                </select>
+            </div>
+
+            <div class="divSelect">
+                <label for="selectStatus">Status do animal:</label>
+                <select name="campoStatus" id="selectStatus" required>
+                    <option class="Opcao"></option>
+                    <option value="Perdido">Perdido</option>
+                    <option value="Encontrado">Encontrado</option>
+                </select>
+            </div>
+            
+
+            <div class="divImagem">
+                <input name="campoFoto" type="file" accept="imagem/*" maxlength="50">
+            </div>
+
+        </form>
+    </div>
+
+        
+=======
                 </div>
                 <div class="divCampo">
                     <input name="campoDataStatus" type="text" placeholder="Data da perda/Data de encontro" maxlength="50"
@@ -63,5 +87,6 @@
                 <button class="botaoEnviar">Enviar dados</button>
             </form>
         </div>
+>>>>>>> b0b9f181d9bd3bfcef724be8d78f2ae128cbfbf2
     </body>
 </html>

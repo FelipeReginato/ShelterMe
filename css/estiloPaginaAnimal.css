@@ -1,0 +1,64 @@
+body{
+    background-image: url(../imagens/background2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.divCampo{
+
+    height: 600px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    border-radius: 15px;
+    background-color:rgba(255, 255, 255, 0.7);
+    
+
+
+}
+input{
+
+    width: 45%;
+    border: 2px solid #FF914D;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    float: left;
+    padding: 8px;
+
+
+}
+
+.divSelect{
+    
+    width: 42%;
+    background-color: #FF914D;
+    padding: 8px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
+    
+    
+}
+select{
+    background-image: url(../imagens/patinhas.jpg);
+    background-size: 90px;
+    background-repeat: repeat;
+    width: 45%;
+    float: right;
+}
+.divImagem{
+    width: 40%;
+    background-color: #FF914D;
+    padding: 8px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 320px;
+    margin-left: 32.5px;
+    position: absolute;
+}
