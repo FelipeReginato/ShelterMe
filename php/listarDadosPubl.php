@@ -17,6 +17,8 @@ if (!$conn) {
 
 
 $result = mysqli_query($conn,"SELECT * FROM animal WHERE CodAnimal IN (SELECT CodAnimal FROM postagem)");
+$resultU = mysqli_query($conn,"SELECT * FROM usuario WHERE CodUsuario IN (SELECT CodUsuario FROM postagem)");
+$rowU = mysqli_fetch_assoc($resultU);
 
 while ($row = mysqli_fetch_assoc($result)) {
     $strData = explode('-',$row["DataNasc"]);
@@ -34,6 +36,8 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<table>";
     echo "<tr>";
     echo "<td>";
+    echo $rowU["Email"];
+    echo "</td><td>";
     echo $row["Especie"];
     echo "</td><td>";
     echo $row["Raca"];
@@ -67,9 +71,16 @@ while ($row = mysqli_fetch_assoc($result)) {
         <?php
     }
     ?>
-    <a href='updatePublicacao.php?id=<?php echo $row["CodAnimal"];?>'>Editar</a>
+    <form action="updatePublicacao.php" method="post">
+    <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
+    <input type="hidden" name="idU" value="<?php echo $rowU["CodUsuario"]; ?>">
+    <button>Editar</button>
+    </form>
     </td><td>
-    <a href='deletarPublicacao.php?id=<?php echo $row["CodAnimal"];?>'>Deletar</a>
+    <form action="deletarPublicacao.php" method="post">
+    <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
+    <button>Excluir</button>
+    </form>
     </td>
     </tr>
 	<?php

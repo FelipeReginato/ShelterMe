@@ -15,9 +15,22 @@ if (!$conn) {
 $sql = "INSERT INTO postagem (CodUsuario, CodAnimal, TipoPostagem) VALUES ('$usuario','$animal','$tipo')";
 
 if ($result = mysqli_query($conn, $sql)) {
-    echo "Novo registro adicionado";
+    ?>
+    
+    <script>
+    window.location.replace("listarDadosPubl.php");
+    alert("Nova publicação enviada!");
+    </script>
+    <?php
 } else {
-    echo "Erro executando INSERT: " . mysqli_error($conn);
+    
+    ?>
+    
+    <script>
+    window.location.replace("criarPublicacao.php");
+    alert("<?php echo "Erro executando INSERT: " . mysqli_error($conn);?>");
+    </script>
+    <?php
 }
 
 mysqli_close($conn);

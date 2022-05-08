@@ -6,7 +6,7 @@ if (!$conn) {
     die("Falha na conexão com o Banco de Dados: " . mysqli_connect_error());
 }
 
-$id = $_GET['id'];
+$id = $_POST['id'];
 
 $sql = "DELETE FROM postagem WHERE CodAnimal = $id";
 

@@ -57,9 +57,20 @@ $sql = "INSERT INTO animal (Especie, Raca, Sexo, Porte, Peso, Status, DataStatus
     VALUES ('$especie','$raca','$sexo','$porte','$peso','$status','$novaDataStatus','$novaDataNasc','$estado','$cidade','$endereco','$nome')";
 
 if ($result = mysqli_query($conn, $sql)) {
-    echo "Novo registro adicionado";
+    ?>
+    
+    <script>
+    window.location.replace("../paginas/paginaMenuPrincipal.html");
+    alert("Novo animal registrado!");
+    </script>
+    <?php
 } else {
-    echo "Erro executando INSERT: " . mysqli_error($conn);
+    ?>
+    <script>
+    window.location.replace("../paginas/paginaAnimal.html");
+    alert("<?php echo "Erro executando INSERT: " . mysqli_error($conn);?>");
+    </script>
+    <?php
 }
 
 mysqli_close($conn);

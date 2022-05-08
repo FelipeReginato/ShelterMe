@@ -19,11 +19,16 @@ $dataStatus = $_POST['campoDataStatus'];
 $dataNasc = $_POST['campoDataNasc'];
 $nome = $_POST['campoNome'];
 $id = $_POST['id'];
+$idU = $_POST['idU'];
+$email = $_POST['email'];
 
 $sql = "UPDATE animal SET Especie = '$especie', Raca = '$raca', Sexo = '$sexo', Porte = '$porte' WHERE CodAnimal = '$id'";
 
-if ($result = mysqli_query($conn, $sql)) {
-    echo "Um registro alterado!";
+
+$sqlU = "UPDATE usuario SET Email='$email' WHERE CodUsuario = '$idU'";
+
+if ($resultU = mysqli_query($conn, $sqlU) && $result = mysqli_query($conn, $sql)) {
+    echo "Registros alterado!";
 } else {
     echo "Erro executando UPDATE: " . mysqli_error($conn);
 }
