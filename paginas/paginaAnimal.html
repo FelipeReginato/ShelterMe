@@ -2,9 +2,11 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="../css/estiloPaginaAnimal.css">
-        
+        <script src="../Scripts/scriptsPaginaAnimal.js"></script>
     </head>
     <body>
+        <div onclick="window.location.href = ''" class="divLogo"></div>
+        <div class="divCadastro"> Cadastrar Animal</div>
         
     <div class="divCampo">
         <form action="../php/enviarDadosAnimal.php" method="post">
@@ -22,23 +24,15 @@
               
           
                     <input name="campoPeso" type="text" placeholder="Peso (Opcional)" maxlength="50">
-               
-      
-                
                     <input name="campoEstado" type="text" placeholder="Estado" maxlength="50" required>
-               
+                    <input id = "troca1" onclick="trocaDate1()" onblur="trocaText1()" name="campoDataNasc" type="text" placeholder="Data de nascimento do animal" maxlength="50">
+                    <input id = "troca2" onclick="trocaDate2()" onblur="trocaText2()" name="campoDataStatus" type="text" placeholder="Data da perda/Data de encontro" maxlength="50">
+
                     <input name="campoCidade" type="text" placeholder="Cidade" maxlength="50" required>
                 
                     <input name="campoEndereco" type="text" placeholder="Endereço" maxlength="50" required>
-<<<<<<< HEAD
-                
-                    <input name="campoDataStatus" type="date" placeholder="Data da perda/Data de encontro" maxlength="50" required>
-              
 
-                    <input name="campoDataNasc" type="date" placeholder="Data de nascimento do animal (Opcional)" maxlength="50">
-
-          
-
+                   
             
             
             <div class="divSelect">
@@ -58,35 +52,10 @@
                     <option value="Perdido">Perdido</option>
                     <option value="Encontrado">Encontrado</option>
                 </select>
-            </div>
-            
-
-            <div class="divImagem">
-                <input name="campoFoto" type="file" accept="imagem/*" maxlength="50">
-            </div>
-
-        </form>
-    </div>
-
-        
-=======
-                </div>
-                <div class="divCampo">
-                    <input name="campoDataStatus" type="text" placeholder="Data da perda/Data de encontro" maxlength="50"
-                    onfocus="(this.type='date')" 
-                    onblur="(this.type='text')" required>
-                </div>
-                <div class="divCampo">
-                    <input name="campoDataNasc" type="text" placeholder="Data de nascimento do animal" maxlength="50"
-                    onfocus="(this.type='date')" 
-                    onblur="(this.type='text')">
-                </div>
-                <div class="divImagem">
-                    <input name="campoFoto" type="file" accept="imagem/*" maxlength="50">
-                </div>
+            </div>    
                 <button class="botaoEnviar">Enviar dados</button>
             </form>
         </div>
->>>>>>> b0b9f181d9bd3bfcef724be8d78f2ae128cbfbf2
+
     </body>
 </html>

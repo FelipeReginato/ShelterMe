@@ -10,29 +10,26 @@ body{
     width: 700px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 80px;
+    margin-top: 30px;
     border-radius: 15px;
-    background-color:rgba(255, 255, 255, 0.7);
+    background-color:rgba(255, 255, 255, 0.6);
     
-
-
 }
-input{
+input {
 
     width: 45%;
     border: 2px solid #FF914D;
     border-radius: 10px;
     margin-left: 20px;
     margin-top: 10px;
-    float: left;
     padding: 8px;
-
+    outline: 0px;
 
 }
 
 .divSelect{
     
-    width: 42%;
+    width: 42.5%;
     background-color: #FF914D;
     padding: 8px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -45,20 +42,58 @@ input{
     
 }
 select{
+
+    width: 150px;
+    height: 25px;
     background-image: url(../imagens/patinhas.jpg);
-    background-size: 90px;
+    background-size: 50px;
     background-repeat: repeat;
-    width: 45%;
     float: right;
+   
 }
-.divImagem{
-    width: 40%;
-    background-color: #FF914D;
-    padding: 8px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    border: 2px solid black;
+
+.botaoEnviar{
+
+    width: 85%;
+    border: 2px solid #FF914D;
     border-radius: 10px;
-    margin-top: 320px;
-    margin-left: 32.5px;
+    padding: 8px;
+    margin-left: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15;
+}
+button:hover{
+
+    background-color: whitesmoke;
+
+}
+
+::placeholder{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15;
+
+}
+
+.divCadastro{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+
+}
+.divLogo{
+    height: 80px;
+    width: 80px;
+    background-image: url(../imagens/LogoSemShelter.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-left: 35px;
+    margin-top: 25px;
     position: absolute;
+    cursor: pointer;
+    
 }
