@@ -62,12 +62,8 @@ if (!(sizeof($optionsUsu) == 0 || sizeof($optionsAni) == 0)){
 				?>
 				</select><br>
 			   
-		<label>Tipo de Postagem</label>
-		<select name="tipo" required>
-			<option value=""></option>
-			<option value="Pub animal encontrado">Animal Encontrado</option>
-			<option value="Pub animal perdido">Animal Perdido</option>
-		</select><br>
+	<input name="nome" type="text" placeholder="Nome Completo" maxlength="60" 
+    pattern="[a-zA-Z\s]{5,60}" title="Nome completo entre 5 e 60 letras" required>
 			   
 	<button> Publicar </button>
 	</form>

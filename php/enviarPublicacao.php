@@ -3,7 +3,8 @@ require 'conectarBD.php';
 
 $usuario = $_POST['codUsu'];
 $animal = $_POST['codAni'];
-$tipo = $_POST['tipo'];
+$nome = $_POST['nome'];
+$data = date("d/m/Y");
 
 $conn = mysqli_connect($servername, $username, $password, $database);
 
@@ -12,7 +13,7 @@ if (!$conn) {
 }
 
 
-$sql = "INSERT INTO postagem (CodUsuario, CodAnimal, TipoPostagem) VALUES ('$usuario','$animal','$tipo')";
+$sql = "INSERT INTO postagem (CodUsuario, CodAnimal, NomeCompleto, DataPostagem) VALUES ('$usuario','$animal','$nome','$data')";
 
 if ($result = mysqli_query($conn, $sql)) {
     ?>
