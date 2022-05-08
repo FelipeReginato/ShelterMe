@@ -16,7 +16,7 @@ if (!$conn) {
 
 
 $sqlU = "SELECT CodUsuario, NomeUsuario FROM Usuario";
-$sqlA = "SELECT CodAnimal, Nome FROM Animal";
+$sqlA = "SELECT CodAnimal, Nome FROM Animal WHERE Status <> 'Solucionado'";
 				
 $optionsUsu = array();
 $optionsAni = array();

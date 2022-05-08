@@ -95,8 +95,17 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <script>
         function validarDelete(){
-            let confirma = confirm("Você deseja mesmo apagar a publicação de <?php echo $row["Nome"]; ?>");
+            let confirma = confirm("Você deseja mesmo apagar a publicação de <?php echo $row["Nome"]; ?>?");
             if (confirma){
+            return true;
+        }else{
+            return false;
+        }
+        }
+        function validarSolucionar(){
+            let confirma = 
+            confirm("Você deseja alterar o registro de <?php echo $row["Nome"];?> para solucionado (registro desse animal não estará mais disponível) e apagar está postagem?");
+        if (confirma){
             return true;
         }else{
             return false;
@@ -116,6 +125,13 @@ while ($row = mysqli_fetch_assoc($result)) {
     <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
     <button onclick="return validarDelete()">Excluir</button>
     </form>
+
+    </td><td>
+    <form action="solucionarPublicacao.php" name="formSolucionar" method="post">
+    <input type="hidden" name="id" value="<?php echo $row["CodAnimal"]; ?>">
+    <button onclick="return validarSolucionar()">Solucionado</button>
+    </form>
+
     </td>
     </tr>
 	<?php
