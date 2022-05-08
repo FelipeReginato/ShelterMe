@@ -28,9 +28,19 @@ $sql = "UPDATE animal SET Especie = '$especie', Raca = '$raca', Sexo = '$sexo', 
 $sqlU = "UPDATE usuario SET Email='$email' WHERE CodUsuario = '$idU'";
 
 if ($resultU = mysqli_query($conn, $sqlU) && $result = mysqli_query($conn, $sql)) {
-    echo "Registros alterado!";
+    ?>
+    <script>
+    window.location.replace("listarDadosPubl.php");
+    alert("Registros alterado!");
+    </script>
+    <?php
 } else {
-    echo "Erro executando UPDATE: " . mysqli_error($conn);
+    ?>
+    <script>
+    window.location.replace("listarDadosPubl.php");
+    alert("<?php echo "Erro executando UPDATE: " . mysqli_error($conn);?>");
+    </script>
+    <?php
 }
 
 mysqli_close($con);

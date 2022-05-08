@@ -6,6 +6,10 @@
         
 </head>
 <body>
+    <div>
+        <button onclick="location.href='criarPublicacao.php'">Criar nova publicação</button>
+        <button onclick="location.href='../paginas/paginaMenuPrincipal.html'">Voltar</button>
+    </div><br>
 <?php
 require 'conectarBD.php';
 $conn = mysqli_connect($servername, $username, $password, $database);
@@ -36,26 +40,64 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<table>";
     echo "<tr>";
     echo "<td>";
+    ?> 
+    <label><b>Contato:</b></label>
+    <?php
     echo $rowU["Email"];
     echo "</td><td>";
+    ?> 
+    <label><b>Nome:</b></label>
+    <?php
+    echo $row["Nome"];
+    echo "</td><td>";
+    ?> 
+    <label><b>Especie:</b></label>
+    <?php
     echo $row["Especie"];
     echo "</td><td>";
+    ?> 
+    <label><b>Raça:</b></label>
+    <?php
     echo $row["Raca"];
     echo "</td><td>";
+    ?> 
+    <label><b>Porte:</b></label>
+    <?php
     echo $row["Porte"];
     echo "</td><td>";
+    ?> 
+    <label><b>Peso:</b></label>
+    <?php
     echo $row["Peso"];
     echo "</td><td>";
+    ?> 
+    <label><b>Sexo:</b></label>
+    <?php
     echo $row["Sexo"];
     echo "</td><td>";
+    ?> 
+    <label><b>Estado:</b></label>
+    <?php
     echo $row["Estado"];
     echo "</td><td>";
+    ?> 
+    <label><b>Cidade:</b></label>
+    <?php
     echo $row["Cidade"];
     echo "</td><td>";
+    ?> 
+    <label><b>Status:</b></label>
+    <?php
     echo $row["Status"];
     echo "</td><td>";
+    ?> 
+    <label><b>Data Perda/Encontro:</b></label>
+    <?php
     echo $dataFinalStatus;
     echo "</td><td>";
+    ?> 
+    <label><b>Data de Nascimento:</b></label>
+    <?php
     echo $dataFinalNasc;
     echo "</td>";
     if ($row['Foto']) { ?>

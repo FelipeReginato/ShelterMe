@@ -67,7 +67,7 @@ if ($result = mysqli_query($conn, $sql)) {
 } else {
     ?>
     <script>
-    window.location.replace("../paginas/paginaAnimal.html");
+    window.location.replace("../paginas/telaLogin.html");
     alert("<?php echo "Erro executando INSERT: " . mysqli_error($conn);?>");
     </script>
     <?php

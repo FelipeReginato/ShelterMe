@@ -11,9 +11,19 @@ $id = $_POST['id'];
 $sql = "DELETE FROM postagem WHERE CodAnimal = $id";
 
 if ($result = mysqli_query($conn, $sql)) {
-    echo "Um registro excluído!";
+    ?>
+    <script>
+    window.location.replace("listarDadosPubl.php");
+    alert("Um registro excluído!");
+    </script>
+    <?php
 } else {
-echo "Erro executando DELETE: " . mysqli_error($conn);
+?>
+    <script>
+    window.location.replace("listarDadosPubl.php");
+    alert("<?php echo "Erro executando DELETE: " . mysqli_error($conn);?>");
+    </script>
+    <?php
 }
 
 
