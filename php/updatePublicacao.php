@@ -53,7 +53,7 @@ $rowU = mysqli_fetch_assoc($resultU);
 value="<?php echo $row["Nome"]; ?>" required>
 
 <input name="campoEspecie" type="text" placeholder="Espécie" value="<?php echo $row["Especie"];?>" maxlength="50" 
-    pattern="[a-zA-Z\s]{10,70}" title="Espécie entre 10 e 70 letras" required>
+    pattern="[a-zA-Z\s]{5,70}" title="Espécie entre 5 e 70 letras" required>
 
 <input name="campoRaca" type="text" placeholder="Raça" value="<?php echo $row["Raca"];?>" maxlength="50" 
 pattern="[a-zA-Z]{5,40}" title="Raça entre 5 e 40 letras" required>
