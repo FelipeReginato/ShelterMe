@@ -11,7 +11,7 @@ body{
     background-color: #FF914D;
     padding: 9px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    border: 2px solid black;
+    color: white;
     border-radius: 10px;
     margin-top: 20px;
     margin-left: 50px;
@@ -31,14 +31,15 @@ input {
     margin-top: 15px;
     padding: 10px;
     outline: 0px;
-    ;
+    
 }
 
 select{
 
     width: 275px;
     height: 25px;
-    background-image: url(../imagens/patinhas.jpg);
+    background-color: white;
+    border-radius: 10px;
     background-size: 50px;
     background-repeat: repeat;
     margin-left:24%;
@@ -47,7 +48,8 @@ select{
 ::placeholder{
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 17px;
+    font-size: 18px;
+    color: black
 
 }
 
@@ -59,7 +61,7 @@ select{
     margin-right: auto;
     margin-top: 70px;
     border-radius: 15px;
-    background-color:rgba(255, 255, 255, 0.6);
+    background-color: rgba(60, 60, 59, 0.4);
     padding-top: 25px;
     padding-bottom: 25px;
     
@@ -70,13 +72,11 @@ select{
 }
 
 .botaoPublicar{
-    border-left: 10px;
     margin-left: 50px;
     margin-top: 25px;
     padding: 15px;
     width: 503px;
     background-color: #FF914D;
-    border: 2px solid black;
     border-radius: 40px;
     color: white;
     font-size: 20px;
@@ -91,17 +91,16 @@ select{
     padding: 15px;
     width: 503px;
     background-color: black;
-    border: 2px solid white;
     border-radius: 40px;
     color: white;
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }  
-button:hover{
+.botaoVoltar:hover{
 
-    background-color: white;
-    color: #FF914D;
-    border: 2px solid #FF914D;
+    background-color: grey;
+    color: white;
+    border: 2px solid white;
     cursor: pointer;
 }
    
@@ -112,4 +111,9 @@ button:hover{
     margin-top: 60px;
     color: black;
 
+}
+.botaoPublicar:hover{
+    background-color: white;
+    border: 2px solid #FF914D;
+    color: #FF914D;
 }
