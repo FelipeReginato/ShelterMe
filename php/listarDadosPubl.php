@@ -46,9 +46,11 @@ if (!$conn) {
 
 $result = mysqli_query($conn,"SELECT * FROM animal WHERE CodAnimal IN (SELECT CodAnimal FROM postagem)");
 $resultU = mysqli_query($conn,"SELECT * FROM usuario WHERE CodUsuario IN (SELECT CodUsuario FROM postagem)");
-$rowU = mysqli_fetch_assoc($resultU);
+
 
 while ($row = mysqli_fetch_assoc($result)) {
+    $rowU = mysqli_fetch_assoc($resultU);
+
     $strData = explode('-',$row["DataNasc"]);
     $ano = $strData[2];
 	$mes = $strData[1];
