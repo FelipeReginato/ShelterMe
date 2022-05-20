@@ -12,10 +12,7 @@
         <form action="../php/enviarDadosAnimal.php" method="post">
                
                     <input name="campoNome" type="text" placeholder="Nome do Animal" minlength="3" maxlength="60" required>
-                
-                
-                    <input name="campoEspecie" type="text" placeholder="Espécie" maxlength="70" 
-                    pattern="[a-zA-Z\s]{5,70}" title="Espécie entre 5 e 70 letras" required>
+            
                 
                     <input name="campoRaca" type="text" placeholder="Raça" maxlength="40" 
                     pattern="[a-zA-Z]{5,40}" title="Raça entre 5 e 40 letras"required>
@@ -36,7 +33,22 @@
                 
                     <input name="campoEndereco" type="text" placeholder="Endereço" minlenght="8" maxlength="50" required>
 
-                   
+
+                    <div class="divSelect">
+                        <label for="selectEspecie">Espécie do Animal:</label>
+                        <select name="campoEspecie" id="selectEspecie" required>
+                            <option></option>
+                            <option value="Cachorro">Cachorro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Passáro">Passáro</option>
+                        </select>
+                    </div>
+
+
+                
+
+
+
             
             
             <div class="divSelect">

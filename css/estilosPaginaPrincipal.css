@@ -1,0 +1,47 @@
+*{margin: 0; padding: 0;}
+body{
+  background-image: url(../imagens/background.jpg);
+  background-size: 100%;
+  background-repeat: repeat;
+  position: absolute;
+}
+.Menu{
+
+  height: 100%;
+  width: 80px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: #f7f7f7;;
+  position: fixed;
+  text-align: center;
+  display: inline-block;
+  z-index: 5;
+  box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
+
+}
+.PataIcone{
+  height: 37px;
+  width: 37px;
+  margin-top: 5px;
+}
+
+.liCadastrar{
+  
+  display: none;
+  height: 800px;
+  width: 180px;
+  padding: 0;
+  border: 0;
+  background-color: gray;
+  position: absolute;
+  left: 5em;  
+  z-index: 4;
+}
+.liMenu{
+  background-color: #FF914D;
+
+}
+.liSubMenu{
+  background-color: #FF914D;
+}
