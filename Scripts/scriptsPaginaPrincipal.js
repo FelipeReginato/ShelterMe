@@ -1,7 +1,8 @@
 function AparecerOpcoes(){
 
     var liPata = document.getElementById('liPata');
-    var PataIcone = document.querySelector('.liCadastrar');
+    var PataIcone = document.querySelector('.OlSubMenu');
+
     
     
       if(PataIcone.style.display === 'block') {

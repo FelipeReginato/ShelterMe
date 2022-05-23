@@ -13,35 +13,41 @@ body{
   margin: 0;
   border: 0;
   background-color: #f7f7f7;;
-  position: fixed;
   text-align: center;
   display: inline-block;
-  z-index: 5;
-  box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
+  box-shadow: 5px 0 18px red;
+  position: fixed;
+  z-index: 5;  
 
 }
 .PataIcone{
-  height: 37px;
-  width: 37px;
+  height: 70%;
+  width: 70%;
   margin-top: 5px;
 }
 
 .liCadastrar{
-  
-  display: none;
-  height: 800px;
-  width: 180px;
-  padding: 0;
-  border: 0;
-  background-color: gray;
-  position: absolute;
-  left: 5em;  
-  z-index: 4;
+ 
+}
+
+.liVerAnimaisCadastrados{
+
 }
 .liMenu{
   background-color: #FF914D;
-
+  height: 8%;
+  width: 100%;
+  position: absolute;
+  z-index: 4;
+ 
 }
-.liSubMenu{
-  background-color: #FF914D;
+.OlSubMenu{
+  display: none;
+  background-color:aquamarine;
+  height: 100%;
+  width: 180px;
+  padding: 0;
+  border: 0;
+  position: fixed;
+  left: 5em;  
 }
