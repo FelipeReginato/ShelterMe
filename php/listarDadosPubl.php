@@ -7,11 +7,9 @@
 </head>
 <body>
     
-    <div class="divLogo"  onclick="location.href=''">
+    <div class="divLogo">
     </div>
-    <div class="divBotao">
-        <button class="botaoPublicar" onclick="location.href='criarPublicacao.php'">Criar nova publicação</button>
-    </div>
+   
 
 
     <script>

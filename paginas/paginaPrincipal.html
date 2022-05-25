@@ -11,16 +11,24 @@
     <body>
         <ol class="Menu">
 
-            <li class="liMenu"> <img src="../imagens/PataIcone.png"  onclick="AparecerOpcoes()" class="PataIcone" ></li>
-                <ol id="liPata" class="OlSubMenu">
-                    
-                    <li class="liVerAnimaisCadastrados"> Ver Animais Cadastrados </li>
-                    <li class="liCadastrar"> Cadastrar Novo Animal </li>
-                
-                </ol>
-            <li></li>
+            <li class="liMenuPrimeiro"> <img src="../imagens/PataIcone.png"  onclick="AparecerOpcoes()" class="Icones" title="Funções com o Animal" ></li>
+      
+            <li class="liMenu"><img src="../imagens/AboutUs.png" class="Icones" title="AboutUS"> </li>
+
+            <li class="liMenuSair"><img src="../imagens/Desconectar.png" class="Icones" title="Desconectar" onclick="location.href='../paginas/paginaMenuPrincipal.html'"></li>
+
         </ol>
      
+        <ol id="liPata" class="OlSubMenu">
+            
+            <li class="liCadastrar" onclick="location.href='../php/criarPublicacao.php'"> Cadastrar Novo Animal </li>
+            <li class="lisSubMenus" onclick="location.href='../php/listarDadosPubl.php'"> Ver Animais Cadastrados </li>
+           
+        
+        </ol>
 
+        <div class="divPublicacoes">
+
+        </div>
     </body>
 </html> 

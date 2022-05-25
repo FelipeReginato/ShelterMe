@@ -5,19 +5,17 @@
     width: 80px;
     background-image: url(../imagens/LogoSemShelter.png);
     background-size: 100%;
-    background-repeat: repeat;
     margin-left: 35px;
     margin-top: 20px;
     
-    position: absolute;
-    cursor: pointer;
+    position: relative;
     
 }
 
 body{
 
     background-image: url(../imagens/background2.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 100%;
     background-attachment: fixed;
 }

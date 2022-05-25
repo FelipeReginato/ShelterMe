@@ -80,7 +80,7 @@ if (!(sizeof($optionsUsu) == 0 || sizeof($optionsAni) == 0)){
 			   
 	<button class="botaoPublicar"> Publicar </button>
 	</form>
-	<button class="botaoVoltar" onclick="location.href='listarDadosPubl.php'"> Voltar</button>
+	<button class="botaoVoltar" onclick="location.href='../paginas/paginaPrincipal.html'"> Voltar</button>
 	</div>
 	
 
