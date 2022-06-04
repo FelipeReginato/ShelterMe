@@ -1,0 +1,119 @@
+body{
+    background-image: url(../imagens/background2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.divSelect{
+    
+    
+    background-color: #FF914D;
+    padding: 9px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 20px;
+    
+    
+}
+
+input {
+    position:relative;
+    width: 476px;
+    border: 2px solid #FF914D;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 100px;
+    margin-top: 15px;
+    padding: 10px;
+    outline: 0px;
+    
+}
+
+select{
+
+    width: 275px;
+    height: 25px;
+    background-color: white;
+    border-radius: 10px;
+    background-size: 50px;
+    background-repeat: repeat;
+    margin-left:24%;
+}
+
+::placeholder{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color: black
+
+}
+
+.divCampo{
+
+
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    border-radius: 15px;
+    background-color: rgba(60, 60, 59, 0.4);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+}
+
+.selectAnimal{
+    margin-left:25%;
+}
+
+.botaoPublicar{
+    margin-left: 50px;
+    margin-top: 25px;
+    padding: 15px;
+    width: 503px;
+    background-color: #FF914D;
+    border-radius: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.botaoVoltar{
+    border-left: 10px;
+    margin-left: 50px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 503px;
+    background-color: black;
+    border-radius: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}  
+.botaoVoltar:hover{
+
+    background-color: grey;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+   
+.divPublicacao{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 70px;
+    text-align: center;
+    margin-top: 60px;
+    color: black;
+
+}
+.botaoPublicar:hover{
+    background-color: white;
+    border: 2px solid #FF914D;
+    color: #FF914D;
+}

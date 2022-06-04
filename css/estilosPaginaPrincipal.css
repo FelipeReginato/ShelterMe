@@ -1,0 +1,121 @@
+*{margin: 0; padding: 0;}
+body{
+  background-image: url(../imagens/background.jpg);
+  background-size: 100%;
+  background-repeat: repeat;
+  position: absolute;
+}
+.Menu{
+
+  height: 100%;
+  width: 80px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: rgba(193, 193, 193, 0.8);
+  text-align: center;
+  display: inline-block;
+  box-shadow: 2px 0 18px black;
+  position: fixed;
+  z-index: 2;
+  
+ 
+
+
+}
+.Icones{
+  height: 60%;
+  width: 60%;
+  margin-top: 11px;
+  cursor: pointer;
+  
+}
+
+
+
+.liCadastrar{
+  background-color: gray; 
+  height: 8%;
+  width: 180px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ;
+  color: black;
+  font-size: 19;
+  padding-top: 4.2%;
+  cursor: pointer;
+  border-bottom: 2px solid #FF914D;
+  
+}
+.liCadastrar:hover{
+  color: white;
+
+}
+
+.lisSubMenus{
+
+  height: 8%;
+  width: 180px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ;
+  color: black;
+  font-size: 19;
+  border-bottom: 2px solid #FF914D;
+  padding-top: 4.2%;
+  cursor: pointer;
+ 
+ 
+}
+.lisSubMenus:hover{
+  background-color: gray;
+  color: white;
+  
+}
+.liMenuPrimeiro{
+  background-color: gray;
+  height: 9%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  border-bottom: 2px solid #FF914D
+}
+.liMenu{
+ 
+  height: 9%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  border-bottom: 2px solid #FF914D;
+  color: black;
+ 
+ 
+}
+.liMenu:hover{
+  background-color: gray;
+  color: black;
+}
+
+.liMenuSair{
+
+  height: 9%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  color: black;
+  margin-top: 670%;
+  
+}
+
+.OlSubMenu{
+  display: none;
+  background-color: rgba(193, 193, 193, 0.8);
+  height: 100%;
+  width: 180px;
+  padding: 0;
+  border: 0;
+  position: fixed;
+  left: 5em;  
+  z-index: 1;
+  list-style: none;
+  text-align: center;
+}
+.divPublicacoes{
+
+}

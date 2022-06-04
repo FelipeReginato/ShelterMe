@@ -1,0 +1,104 @@
+body{
+    background-image: url(../imagens/background2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.divCampo{
+
+    height: 520px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 15px;
+    background-color:rgba(255, 255, 255, 0.6);
+    padding-top: 25px;
+    
+}
+input {
+
+    width: 41.3%;
+    border: 2px solid #FF914D;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 15px;
+    padding: 10px;
+    outline: 0px;
+
+}
+
+.divSelect{
+    
+    width: 41.5%;
+    background-color: #FF914D;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+    
+    
+}
+select{
+
+    width: 150px;
+    height: 25px;
+    background-image: url(../imagens/patinhas.jpg);
+    background-size: 50px;
+    background-repeat: repeat;
+    float: right;
+   
+}
+
+
+.botaoEnviar{
+
+    width: 85%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+    background-color: #FF914D;
+    color: white;
+}
+button:hover{
+
+    background-color: #ff6505;
+
+}
+
+::placeholder{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+
+}
+
+.divCadastro{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+
+}
+.divLogo{
+    height: 80px;
+    width: 80px;
+    background-image: url(../imagens/LogoSemShelter.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-left: 35px;
+    margin-top: 25px;
+    position: absolute;
+    cursor: pointer;
+    
+}
