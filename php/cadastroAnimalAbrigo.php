@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-	<link rel="stylesheet" href="../css/estiloPaginaAnimalAbrigo.css">
+	<link rel="stylesheet" href="../css/estilosPaginaAnimalAbrigo.css">
 	
         
 </head>

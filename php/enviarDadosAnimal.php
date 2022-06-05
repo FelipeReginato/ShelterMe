@@ -6,7 +6,7 @@ $id = $_SESSION["id"];
 $especie = $_POST['campoEspecie'];
 $raca = $_POST['campoRaca'];
 $sexo = $_POST['campoSexo'];
-$porte = $_POST['campoPorte'];
+$espcs = $_POST['campoEspcs'];
 $peso = $_POST['campoPeso'];
 $estado = $_POST['campoEstado'];
 $cidade = $_POST['campoCidade'];
@@ -57,8 +57,8 @@ if (!$conn) {
     die("Falha na conexão com o Banco de Dados: " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO animal (CodPessoa, Especie, Raca, Sexo, Porte, Peso, Status, DataStatus, DataNasc, Estado, Cidade, Endereco, Nome) 
-    VALUES ('$id','$especie','$raca','$sexo','$porte','$peso','$status','$novaDataStatus','$novaDataNasc','$estado','$cidade','$endereco','$nome')";
+$sql = "INSERT INTO animal (CodPessoa, Especie, Raca, Sexo, 	Especs, Peso, Status, DataStatus, DataNasc, Estado, Cidade, Endereco, Nome) 
+    VALUES ('$id','$especie','$raca','$sexo','$espcs','$peso','$status','$novaDataStatus','$novaDataNasc','$estado','$cidade','$endereco','$nome')";
 
 
 
