@@ -1,0 +1,85 @@
+*{margin: 0; padding: 0;}
+
+
+body{
+    width: 100%;
+    height: 100%;   
+    background-image: url(../imagens/background.jpg);
+    background-size: 100%;
+    background-repeat: repeat;
+    display:flow-root;
+}
+
+.divCadastro{
+
+    background-color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    width: 22%;
+    height: 50%;
+    box-shadow: 0 0 1em grey;
+    border-radius: 15px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+
+input{
+    border-left: 10px;
+    margin-bottom: 12px;
+    padding: 15px;
+    width: 85%;
+    border: 2px solid #FF914D;
+    border-radius: 40px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+} 
+::placeholder{
+    color: #FF914D;
+
+}
+    
+button{
+    border-left: 10px;
+    margin-bottom: 12px;
+    padding: 15px;
+    width: 95%;
+    background-color: #FF914D;
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}  
+button:hover{
+
+    background-color: white;
+    color: #FF914D;
+    border: 2px solid #FF914D;
+    cursor: pointer;
+}
+
+.divMensagemCadastro{
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-style: bold;
+    color: #FF914D;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    width: 100%;
+
+}
+.divLogo{
+    height: 9%;
+    width: 4.5%;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    margin-left: 35px;
+    position: absolute;
+    cursor: pointer;
+    
+}
