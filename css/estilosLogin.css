@@ -1,35 +1,25 @@
-body{
+*{margin: 0; padding: 0;}
 
+body{
+    width: 100%;
+    height: 100%;    
     background-image: url(../imagens/background.jpg);
     background-size: 100%;
-    background-repeat: no-repeat;
-    
-    
-    
+    background-repeat: repeat;
+    display: flow-root;
+
 }
-.divLogo{
-        height: 80px;
-        width: 80px;
-        background-image: url(../imagens/LogoSemShelter.png);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        margin-left: 35px;
-        margin-top: 25px;
-        position:relative;
-        cursor: pointer;
-        
-}
-    
+
     
 .divLogin {
     
         background-color: rgba(255, 255, 255, 0.4);
         text-align: center;
-        width: 300px;
-        height: 500px;
+        width: 20%;
+        height: 100%;
         box-shadow: 0 0 1em grey;
         border-radius: 15px;
-        margin-top: 70px;
+        margin-top: 12%;
         margin-left: auto;
         margin-right: auto;
        
@@ -37,7 +27,8 @@ body{
 }
     
 .divBemVindo{
-        padding-top: 50px;
+        padding-top: 10px;
+        padding-bottom: 40px;
         text-align: center;
         font-style: bold;
         color: #FF914D;
@@ -46,16 +37,7 @@ body{
         width: 100%;
         
 }   
-.LinhaBemVindo{
-        border-radius: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5px;
-        margin-bottom: 50px;
-        width: 85%;
-    
-    
-}   
+
 input{
         border-left: 10px;
         margin-bottom: 12px;
@@ -82,6 +64,7 @@ button{
         color: white;
         font-size: 20px;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       
 }  
 button:hover{
     
@@ -90,6 +73,17 @@ button:hover{
         border: 2px solid #FF914D;
         cursor: pointer;
 }
-       
+ 
+.divLogo{
+        height: 9%;
+        width: 4.5%;
+        background-repeat: no-repeat;
+        margin-top: 30px;
+        margin-left: 35px;
+        position: absolute;
+        cursor: pointer;
+        
+}
+    
     
     
