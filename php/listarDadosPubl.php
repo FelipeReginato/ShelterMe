@@ -43,7 +43,7 @@ if (!$conn) {
 session_start();
 $id = $_SESSION["id"];
 
-$result = mysqli_query($conn,"SELECT * FROM animal WHERE CodAnimal IN (SELECT CodAnimal FROM postagem)");
+$result = mysqli_query($conn,"SELECT * FROM animal WHERE CodAnimal IN (SELECT CodAnimal FROM postagem WHERE CodPessoa = '$id')");
 $resultU = mysqli_query($conn,"SELECT * FROM pessoa WHERE CodPessoa = '$id'");
 $rowU = mysqli_fetch_assoc($resultU);
 

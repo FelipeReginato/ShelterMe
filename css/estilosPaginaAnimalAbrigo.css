@@ -19,24 +19,19 @@ body{
 }
 input {
 
-<<<<<<< HEAD
-    width: 44.5%;
-=======
-    width: 45%;
->>>>>>> 6f24284fc4e89a31e6f831d271148cc12c160406
+    width: 41.3%;
     border: 2px solid #FF914D;
     border-radius: 10px;
     margin-left: 20px;
     margin-top: 15px;
     padding: 10px;
     outline: 0px;
-    display: flexbox;
 
 }
 
 .divSelect{
     
-    width: 41%;
+    width: 41.5%;
     background-color: #FF914D;
     padding: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

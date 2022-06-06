@@ -36,14 +36,14 @@ if ($result = mysqli_query($conn, $sql)) {
     ?>
     
     <script>
-    window.location.replace("../paginas/telaLogin.html");
+    window.location.replace("loginUsuario.php");
     alert("Novo usuário cadastrado!");
     </script>
     <?php
 } else {
     ?>
     <script>
-    window.location.replace("../php/cadastroUsuario.php");
+    window.location.replace("cadastroUsuario.php");
     alert("<?php echo "Erro executando INSERT: " . mysqli_error($conn);?>");
     </script>
     <?php
