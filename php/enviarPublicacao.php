@@ -34,7 +34,7 @@ if ($result = mysqli_query($conn, $sql)) {
     ?>
     
     <script>
-    window.location.replace("listarDadosPubl.php");
+    window.location.replace("paginaPrincipal.php");
     alert("Nova publicação enviada!");
     </script>
     <?php
