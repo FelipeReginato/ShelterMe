@@ -36,12 +36,11 @@ if (!$conn) {
     die("Falha na conexão com o Banco de Dados: " . mysqli_connect_error());
 }
 
-$result = mysqli_query($conn,"SELECT * FROM animal WHERE CodAnimal IN (SELECT CodAnimal FROM postagem)");
-$resultU = mysqli_query($conn,"SELECT * FROM usuario WHERE CodUsuario IN (SELECT CodUsuario FROM postagem)");
+$result = mysqli_query($conn,"SELECT p.Email,a.* FROM pessoa p,animal a,postagem o WHERE a.CodAnimal = o.CodAnimal AND p.CodPessoa = o.CodPessoa");
 
 
 while ($row = mysqli_fetch_assoc($result)) {
-    $rowU = mysqli_fetch_assoc($resultU);
+    
 
     $strData = explode('-',$row["DataNasc"]);
     $ano = $strData[2];
@@ -62,7 +61,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
         <td class= "tdDados">
         <label><b>Contato:</b></label>
-        <?php echo $rowU["Email"]; ?> 
+        <?php echo $row["Email"]; ?> 
         </td>
         
         <td class= "tdDados">
@@ -82,7 +81,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         
         <td class= "tdDados">
         <label><b>Porte:</b></label>
-        <?php echo $row["Porte"]; ?> 
+        <?php echo $row["Especs"]; ?> 
         </td>
         
         <td class= "tdDados">
@@ -129,7 +128,8 @@ while ($row = mysqli_fetch_assoc($result)) {
         </table>
 
 	<?php
-}
+ }
+
 mysqli_close($con);
 ?>
 

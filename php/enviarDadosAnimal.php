@@ -57,7 +57,7 @@ if (!$conn) {
     die("Falha na conexão com o Banco de Dados: " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO animal (CodPessoa, Especie, Raca, Sexo, 	Especs, Peso, Status, DataStatus, DataNasc, Estado, Cidade, Endereco, Nome) 
+$sql = "INSERT INTO animal (CodPessoa, Especie, Raca, Sexo, Especs, Peso, Status, DataStatus, DataNasc, Estado, Cidade, Endereco, Nome) 
     VALUES ('$id','$especie','$raca','$sexo','$espcs','$peso','$status','$novaDataStatus','$novaDataNasc','$estado','$cidade','$endereco','$nome')";
 
 
