@@ -10,6 +10,7 @@
 <?php
 session_start();
 unset($_SESSION["id"]);
+unset($_SESSION["idA"]);
 ?>
 <img src="../imagens/LogoSemShelter.png" onclick="window.location.href = '../php/menuPrincipal.php'" class="divLogo" title="Voltar">
 <form action="../php/executarCadastroUsuario.php" method="post">

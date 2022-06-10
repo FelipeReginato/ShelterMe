@@ -68,7 +68,6 @@ if ($result = mysqli_query($conn, $sql)) {
     
     <script>
     window.location.replace("../php/enviarPublicacao.php");
-    alert("Novo animal registrado!");
     </script>
     <?php
 } else {

@@ -10,6 +10,7 @@
 <?php
 session_start();
 unset($_SESSION["id"]);
+unset($_SESSION["idA"]);
 ?>
 <form action="../php/executarCadastroAbrigo.php" method="post">
     <input  type="text" placeholder="Nome do Abrigo" minlength="4" maxlength="60" name="nome" required > <br>

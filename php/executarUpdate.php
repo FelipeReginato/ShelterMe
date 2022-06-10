@@ -9,7 +9,7 @@ if (!$conn) {
 $especie = $_POST['campoEspecie'];
 $raca = $_POST['campoRaca'];
 $sexo = $_POST['campoSexo'];
-$porte = $_POST['campoPorte'];
+$espcs = $_POST['campoEspcs'];
 $peso = $_POST['campoPeso'];
 $estado = $_POST['campoEstado'];
 $cidade = $_POST['campoCidade'];
@@ -52,18 +52,17 @@ if($dataStatus != ""){
     $novaDataStatus = "";
 }
 
-$sql = "UPDATE animal SET Especie = '$especie', Raca = '$raca', Sexo = '$sexo', Porte = '$porte', Peso = '$peso', 
+$sql = "UPDATE animal SET Especie = '$especie', Raca = '$raca', Sexo = '$sexo', Especs = '$espcs', Peso = '$peso', 
     Estado = '$estado', Cidade = '$cidade', Endereco = '$endereco', Status = '$status', DataStatus = '$dataStatus', 
     DataNasc = '$dataNasc', Nome = '$nome' WHERE CodAnimal = '$id'";
 
 
-$sqlU = "UPDATE usuario SET Email='$email' WHERE CodUsuario = '$idU'";
+$sqlU = "UPDATE pessoa SET Email='$email' WHERE CodPessoa = '$idU'";
 
 if ($resultU = mysqli_query($conn, $sqlU) && $result = mysqli_query($conn, $sql)) {
     ?>
     <script>
     window.location.replace("listarDadosPubl.php");
-    alert("Registros alterado!");
     </script>
     <?php
 } else {

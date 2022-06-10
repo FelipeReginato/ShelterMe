@@ -52,38 +52,68 @@ $rowU = mysqli_fetch_assoc($resultU);
 <input name="campoNome" type="text" placeholder="Nome do animal" minlength="3" maxlength="60" 
 value="<?php echo $row["Nome"]; ?>" required>
 
-<input name="campoEspecie" type="text" placeholder="Espécie" value="<?php echo $row["Especie"];?>" maxlength="50" 
-    pattern="[a-zA-Z\s]{5,70}" title="Espécie entre 5 e 70 letras" required>
 
-<input name="campoRaca" type="text" placeholder="Raça" value="<?php echo $row["Raca"];?>" maxlength="50" 
-pattern="[a-zA-Z]{5,40}" title="Raça entre 5 e 40 letras" required>
-
-<input name="campoPorte" type="text" placeholder="Porte" maxlength="40" 
-pattern="[a-zA-Z]{5,40}" title="Porte entre 5 e 40 letras" 
-value="<?php echo $row["Porte"];?>" required>
+<input name="campoEspcs" type="text" placeholder="Especificações" maxlength="60" minlength="5"
+title="Especificações entre 5 e 60 letras" 
+value="<?php echo $row["Especs"];?>" required>
 
 <input name="campoPeso" type="text" placeholder="Peso (Opcional)"
 value="<?php echo $row["Peso"]; ?>" maxlength="20">
 
 <input name="campoEstado" type="text" placeholder="Estado" maxlength="30" 
-pattern="[a-zA-Z]{5,30}" title="Estado entre 5 e 30 letras" 
+pattern="[a-zA-ZÀ-ž\s]{5,30}" title="Estado entre 5 e 30 letras" 
 value="<?php echo $row["Estado"]; ?>" required>
+                
+<input name="campoDataNasc" type="text" placeholder="Data de nascimento do animal" maxlength="50"
+    id = "troca1" onclick="trocaDate1()" onblur="trocaText1()"
+    value="<?php echo $row["DataNasc"]; ?>">
 
 <input name="campoDataStatus" type="text" placeholder="Data da perda/Data de encontro" maxlength="50"
     id = "troca2" onclick="trocaDate2()" onblur="trocaText2()"
     value="<?php echo $row["DataStatus"]; ?>" required>
                 
-<input name="campoDataNasc" type="text" placeholder="Data de nascimento do animal" maxlength="50"
-    id = "troca1" onclick="trocaDate1()" onblur="trocaText1()"
-    value="<?php echo $row["DataStatus"]; ?>">
-                
 <input name="campoCidade" type="text" placeholder="Cidade" maxlength="40" 
-pattern="[a-zA-Z]{5,40}" title="Cidade entre 5 e 40 letras"
+pattern="[a-zA-ZÀ-ž\s]{5,40}" title="Cidade entre 5 e 40 letras"
 value="<?php echo $row["Cidade"]; ?>" required>
 
 <input name="campoEndereco" type="text" placeholder="Endereço" 
 minlenght="8" maxlength="50"
 value="<?php echo $row["Endereco"]; ?>" required>
+
+<div class="divSelect">
+    <label for="selectEspecie">Espécie do Animal:</label>
+    <select name="campoEspecie" id="selectEspecie" required>
+        <option value="<?php echo $row["Especie"];?>"><?php echo $row["Especie"];?></option>
+        <?php if($row["Especie"] == "Cachorro"){
+        ?>
+        <option value="Gato">Gato</option>
+        <option value="Passáro">Passáro</option>
+        <?php
+    }else if($row["Especie"] == "Gato"){
+        ?>
+        <option value="Cachorro">Cachorro</option>
+        <option value="Passáro">Passáro</option>
+        <?php
+    }else{
+    ?>
+    <option value="Gato">Gato</option>
+    <option value="Passáro">Passáro</option>
+    <?php
+   } 
+   ?>    
+    </select>
+</div>
+
+
+                
+
+<div class="divSelect">
+    <label for="selectRaca">Raça do animal:</label>
+    <select name="campoRaca" id="selectRaca" required>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+    </select>
+</div>
+
 
 <div class="divSelect">
 <label for="selectSexo">Sexo do animal:</label>
@@ -108,6 +138,7 @@ value="<?php echo $row["Endereco"]; ?>" required>
    ?>    
 </select>
 </div>
+
 <div class="divSelect">
 <label for="selectStatus">Status do animal:</label>
 <select name="campoStatus" id="selectStatus" required>

@@ -17,18 +17,18 @@
                 
                 
                 
-                    <input name="campoEspcs" type="text" placeholder="Especificações" maxlength="40"
+                    <input name="campoEspcs" type="text" placeholder="Especificações" maxlength="60" minlength="5"
                     title="Especificações entre 5 e 60 letras" required>
               
           
                     <input name="campoPeso" type="text" placeholder="Peso (Opcional)" maxlength="20">
                     <input name="campoEstado" type="text" placeholder="Estado" maxlength="30" 
-                    pattern="[a-zA-Z]{5,30}" title="Estado entre 5 e 30 letras" required>
+                    pattern="[a-zA-ZÀ-ž\s]{5,30}" title="Estado entre 5 e 30 letras" required>
                     <input id = "troca1" onclick="trocaDate1()" onblur="trocaText1()" name="campoDataNasc" type="text" placeholder="Data de nascimento do animal" maxlength="50">
                     <input id = "troca2" onclick="trocaDate2()" onblur="trocaText2()" name="campoDataStatus" type="text" placeholder="Data da perda/Data de encontro" maxlength="50">
 
                     <input name="campoCidade" type="text" placeholder="Cidade" maxlength="40"
-                    pattern="[a-zA-Z]{5,40}" title="Cidade entre 5 e 40 letras" required>
+                    pattern="[a-zA-ZÀ-ž\s]{5,40}" title="Cidade entre 5 e 40 letras" required>
                 
                     <input name="campoEndereco" type="text" placeholder="Endereço" minlenght="8" maxlength="50" required>
 
@@ -51,7 +51,7 @@
                         <label for="selectRaca">Raça do animal:</label>
                         <select name="campoRaca" id="selectRaca" required>
                             <option></option>
-                            <option value="Macho">teste</option>
+                            <option value="Teste">teste</option>
                         </select>
                     </div>
             

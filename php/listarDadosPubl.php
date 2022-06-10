@@ -7,8 +7,7 @@
 </head>
 <body>
     
-    <div class="divLogo">
-    </div>
+<div onclick="window.location.href = 'paginaPrincipal.php'" class="divLogo"></div>
    
 
 
@@ -88,8 +87,8 @@ while ($row = mysqli_fetch_assoc($result)) {
         </td>
         
         <td class= "tdDados">
-        <label><b>Porte:</b></label>
-        <?php echo $row["Porte"]; ?> 
+        <label><b>Especs:</b></label>
+        <?php echo $row["Especs"]; ?> 
         </td>
         
         <td class= "tdDados">

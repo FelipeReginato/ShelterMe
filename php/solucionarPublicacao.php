@@ -16,7 +16,6 @@ if ($result = mysqli_query($conn, $sql) && $resultA = mysqli_query($conn, $sqlA)
     ?>
     <script>
     window.location.replace("listarDadosPubl.php");
-    alert("Registro do animal alterado e publicação apagada!");
     </script>
     <?php
 } else {

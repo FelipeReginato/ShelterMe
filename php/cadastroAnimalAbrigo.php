@@ -7,6 +7,12 @@
         
 </head>
 <body>
+
+<?php
+session_start();
+unset($_SESSION["id"]);
+unset($_SESSION["idA"]);
+?>
 <div onclick="window.location.href = 'paginaPrincipal.php'" class="divLogo"></div>
 <div class="divCadastro"> Cadastrar Animal</div>
     <script>
@@ -34,7 +40,49 @@ pattern="[a-zA-Z]{5,40}" title="Cidade entre 5 e 40 letras" required>
                 
 <input name="campoEndereco" type="text" placeholder="Endereço" minlenght="8" maxlength="50" required>
 
+<div class="divSelect">
+    <label for="selectEspecie">Espécie do Animal:</label>
+        <select name="campoEspecie" id="selectEspecie" required>
+            <option></option>
+            <option value="Cachorro">Cachorro</option>
+            <option value="Gato">Gato</option>
+            <option value="Passáro">Passáro</option>
+        </select>
+</div>
 
+<div class="divSelect">
+    <label for="selectRaca">Raça do Animal:</label>
+        <select name="campoRaca" id="selectRaca" required>
+            <option></option>
+            <option value="teste">Teste</option>
+        </select>
+</div>
+
+<div class="divSelect">
+    <label for="selectCor">Cor do Animal:</label>
+        <select name="campoCor" id="selectCor" required>
+            <option></option>
+            <option value="Amarelo">Amarelo</option>
+            <option value="Azul">Azul</option>
+            <option value="Branco">Branco</option>
+            <option value="Caramelo">Caramelo</option>
+            <option value="Colorido">Colorido</option>  
+            <option value="Preto">Preto</option>
+            <option value="Marrom">Marrom</option>
+            <option value="Verde">Verde</option>
+                       
+        </select>
+</div>
+
+<div class="divSelect">
+    <label for="selectIdade">Idade do Animal:</label>
+        <select name="campoIdade" id="selectIdade" required>
+            <option></option>
+            <option value="Cachorro">Idoso</option>
+            <option value="Gato">Adulto</option>
+            <option value="Passáro">Filhote</option>
+        </select>
+</div>
 
 <div class="divSelect">
     <label for="selectSexo">Sexo do animal:</label>
@@ -56,47 +104,6 @@ pattern="[a-zA-Z]{5,40}" title="Cidade entre 5 e 40 letras" required>
         </select>
 </div>
 
-<div class="divSelect">
-    <label for="selectEspecie">Espécie do Animal:</label>
-        <select name="campoEspecie" id="selectEspecie" required>
-            <option></option>
-            <option value="Cachorro">Cachorro</option>
-            <option value="Gato">Gato</option>
-            <option value="Passáro">Passáro</option>
-        </select>
-</div>
-
-<div class="divSelect">
-    <label for="selectRaca">Raça do Animal:</label>
-        <select name="campoRaca" id="selectRaca" required>
-            <option></option>
-        </select>
-</div>
-
-<div class="divSelect">
-    <label for="selectPorte">Cor do Animal:</label>
-        <select name="campoCor" id="selectCor" required>
-            <option></option>
-            <option value="Passáro">Amarelo</option>
-            <option value="Passáro">Azul</option>
-            <option value="Gato">Branco</option>
-            <option value="Passáro">Caramelo</option>
-            <option value="Cachorro">Preto</option>
-            <option value="Passáro">Marrom</option>
-            <option value="Passáro">Verde</option>
-            <option value="Passáro">Colorido</option>             
-        </select>
-</div>
-
-<div class="divSelect">
-    <label for="selectIdade">Idade do Animal:</label>
-        <select name="campoIdade" id="selectIdade" required>
-            <option></option>
-            <option value="Cachorro">Idoso</option>
-            <option value="Gato">Adulto</option>
-            <option value="Passáro">Filhote</option>
-        </select>
-</div>
 
 
 

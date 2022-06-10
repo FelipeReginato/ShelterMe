@@ -16,9 +16,10 @@
             <?php
             session_start();
             unset($_SESSION["id"]);
+            unset($_SESSION["idA"]);
             ?>
             
-            <div onclick="window.location.href = '../paginas/paginaMenuPrincipal.html'" class="divLogo"></div>
+            <img src="../imagens/LogoSemShelter.png" onclick="window.location.href = '../php/menuPrincipal.php'" class="divLogo" title="Voltar">
             <div class="divLogin">
                 <div class="divBemVindo">  Bem Vindo(a) </div>
                 <div class="LinhaBemVindo"></div>
