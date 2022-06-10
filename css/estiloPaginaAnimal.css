@@ -26,12 +26,13 @@ input {
     margin-top: 15px;
     padding: 10px;
     outline: 0px;
+    display: flexbox;
 
 }
 
 .divSelect{
     
-    width: 41.5%;
+    width: 42%;
     background-color: #FF914D;
     padding: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -71,7 +72,11 @@ select{
 }
 button:hover{
 
-    background-color: #ff6505;
+ 
+    background-color: white;
+    color: #FF914D;
+    border: 2px solid #FF914D;
+    cursor: pointer;
 
 }
 
