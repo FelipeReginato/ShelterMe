@@ -4,11 +4,9 @@
         
         <meta charset="utf-8">
        
-        <link rel="stylesheet" href="../css/estilosLogin.css">
+        <link rel="stylesheet" href="../css/estilosLoginAbrigo.css">
 
        
-
-
     </head>
 
 
@@ -19,13 +17,13 @@
             unset($_SESSION["idA"]);
             ?>
             
-            <img src="../imagens/LogoSemShelter.png" onclick="window.location.href = '../php/menuPrincipal.php'" class="divLogo" title="Voltar">
+            <img src="../imagens/ShelterMELogoAbrigo.png" onclick="window.location.href = '../php/menuPrincipal.php'" class="divLogo" title="Voltar">
             <div class="divLogin">
-                <div class="divBemVindo">  Bem Vindo(a) </div>
+                <div class="divBemVindo">  Login de Abrigo </div>
                 <div class="LinhaBemVindo"></div>
                 
                 <form action="logarAbrigo.php" method="post">
-                    <input  type="text" placeholder="Abrigo" minlength="4" maxlength="60" name="nome" required > <br>
+                    <input  type="text" placeholder="Nome do Abrigo" minlength="4" maxlength="60" name="nome" required > <br>
 
                     <input  type="text" placeholder="E-mail" maxlength="60" name="email" 
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
