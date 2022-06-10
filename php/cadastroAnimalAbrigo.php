@@ -33,7 +33,7 @@ unset($_SESSION["idA"]);
 <input name="campoEstado" type="text" placeholder="Estado" maxlength="30" 
 pattern="[a-zA-ZÀ-ž\s]{5,30}" title="Estado entre 5 e 30 letras" required>
 
-<input id = "troca2" onclick="trocaDate2()" onblur="trocaText2()" name="campoDataEncontro" type="text" placeholder="Data de encontro" maxlength="50">
+<input id = "troca2" onclick="trocaDate2()" onblur="trocaText2()" max="2022-06-01" name="campoDataEncontro" type="text" placeholder="Data de encontro" maxlength="50">
 
 <input name="campoCidade" type="text" placeholder="Cidade" maxlength="40"
 pattern="[a-zA-ZÀ-ž\s]{5,40}" title="Cidade entre 5 e 40 letras" required>

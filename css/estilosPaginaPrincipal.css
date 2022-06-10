@@ -30,8 +30,45 @@ body{
   cursor: pointer;
   
 }
+.trDados{
+
+    
+  width: 300px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  
+
+}
+.tdDados{
+  
+  padding-top: 7px;
+  width: auto;
+  height: 30px;
+  display: flex; 
+  border: 2.3px solid #FF914D;
+  border-radius: 10px;
+  margin: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  color: black;
+  
+
+}
 
 
+.tableDados{
+  float: left;
+  margin-left: 20px;
+  margin-top: 80px;
+  height: 400px;
+  width: 300px;
+  border: 3px black solid;
+  background-image: url(../imagens/patinhas.jpg);
+  background-size: 50%;
+  border-radius: 18px;
+
+}
 
 .liCadastrar{
   background-color: gray; 

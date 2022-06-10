@@ -28,7 +28,7 @@ unset($_SESSION["idA"]);
         pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
         title="CPF inválido, exemplo: 123.456.789-00" required > <br>
 
-        <input id = "troca1" onclick="trocaDate1()" onblur="trocaText1()" name="campoDataNasc" id="dataNasc" max="2022-01-01" min="1900-01-01"
+        <input id = "troca1" onclick="trocaDate1()" onblur="trocaText1()" max="2022-06-01" name="campoDataNasc" id="dataNasc" max="2022-01-01" min="1900-01-01"
         type="text" placeholder="Data de nascimento" required> <br>
 
         <input  type="password" placeholder="Senha" maxlength="40" name="senha" id="senha"
