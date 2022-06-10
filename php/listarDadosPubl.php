@@ -160,7 +160,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 	<?php
     
 }
-mysqli_close($con);
+mysqli_close($conn);
 ?>
 </body>
 

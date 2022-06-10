@@ -31,12 +31,12 @@ unset($_SESSION["idA"]);
 <input name="campoPeso" type="text" placeholder="Peso (Opcional)" maxlength="20">
 
 <input name="campoEstado" type="text" placeholder="Estado" maxlength="30" 
-pattern="[a-zA-Z]{5,30}" title="Estado entre 5 e 30 letras" required>
+pattern="[a-zA-ZÀ-ž\s]{5,30}" title="Estado entre 5 e 30 letras" required>
 
 <input id = "troca2" onclick="trocaDate2()" onblur="trocaText2()" name="campoDataEncontro" type="text" placeholder="Data de encontro" maxlength="50">
 
 <input name="campoCidade" type="text" placeholder="Cidade" maxlength="40"
-pattern="[a-zA-Z]{5,40}" title="Cidade entre 5 e 40 letras" required>
+pattern="[a-zA-ZÀ-ž\s]{5,40}" title="Cidade entre 5 e 40 letras" required>
                 
 <input name="campoEndereco" type="text" placeholder="Endereço" minlenght="8" maxlength="50" required>
 
@@ -78,9 +78,9 @@ pattern="[a-zA-Z]{5,40}" title="Cidade entre 5 e 40 letras" required>
     <label for="selectIdade">Idade do Animal:</label>
         <select name="campoIdade" id="selectIdade" required>
             <option></option>
-            <option value="Cachorro">Idoso</option>
-            <option value="Gato">Adulto</option>
-            <option value="Passáro">Filhote</option>
+            <option value="Idoso">Idoso</option>
+            <option value="Adulto">Adulto</option>
+            <option value="Filhote">Filhote</option>
         </select>
 </div>
 
@@ -98,9 +98,9 @@ pattern="[a-zA-Z]{5,40}" title="Cidade entre 5 e 40 letras" required>
     <label for="selectPorte">Porte do Animal:</label>
         <select name="campoPorte" id="selectPorte" required>
             <option></option>
-            <option value="Cachorro">Grande</option>
-            <option value="Gato">Médio</option>
-            <option value="Passáro">Pequeno</option>
+            <option value="Grande">Grande</option>
+            <option value="Médio">Médio</option>
+            <option value="Pequeno">Pequeno</option>
         </select>
 </div>
 
