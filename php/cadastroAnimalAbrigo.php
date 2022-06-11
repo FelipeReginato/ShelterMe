@@ -42,19 +42,17 @@ pattern="[a-zA-ZÀ-ž\s]{5,40}" title="Cidade entre 5 e 40 letras" required>
 
 <div class="divSelect">
     <label for="selectEspecie">Espécie do Animal:</label>
-        <select name="campoEspecie" id="selectEspecie" required>
+        <select name="campoEspecie" onchange="MudaRaca()" id="selectEspecie" required>
             <option></option>
             <option value="Cachorro">Cachorro</option>
             <option value="Gato">Gato</option>
-            <option value="Passáro">Passáro</option>
+            <option value="Pássaro">Pássaro</option>
         </select>
 </div>
 
 <div class="divSelect">
     <label for="selectRaca">Raça do Animal:</label>
         <select name="campoRaca" id="selectRaca" required>
-            <option></option>
-            <option value="teste">Teste</option>
         </select>
 </div>
 
