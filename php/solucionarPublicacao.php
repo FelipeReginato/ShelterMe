@@ -10,7 +10,7 @@ $id = $_POST['id'];
 
 $sqlA = "UPDATE animal SET Status = 'Solucionado' WHERE CodAnimal = '$id'";
 
-$sql = "DELETE FROM postagem WHERE CodAnimal = $id";
+$sql = "DELETE FROM postagem WHERE CodAnimal = '$id'";
 
 if ($result = mysqli_query($conn, $sql) && $resultA = mysqli_query($conn, $sqlA)) {
     ?>

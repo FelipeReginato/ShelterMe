@@ -29,7 +29,7 @@ if ($result = mysqli_query($conn, $sql)) {
     ?>
     
     <script>
-    window.location.replace("paginaPrincipal.php");
+    window.location.replace("paginaPrincipalAbrigo.php");
     </script>
     <?php
 } else {

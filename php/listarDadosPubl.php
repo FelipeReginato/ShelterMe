@@ -13,7 +13,7 @@
 
     <script>
         function validarDelete(){
-            let confirma = confirm("Você deseja mesmo apagar a publicação de <?php echo $row["Nome"]; ?>?");
+            let confirma = confirm("Você deseja mesmo apagar essa publicação?");
             if (confirma){
             return true;
         }else{
@@ -22,7 +22,7 @@
         }
         function validarSolucionar(){
             let confirma = 
-            confirm("Você deseja alterar o registro de <?php echo $row["Nome"];?> para solucionado (registro desse animal não estará mais disponível) e apagar está postagem?");
+            confirm("Você deseja alterar esse registro para solucionado (registro desse animal não estará mais disponível) e apagar está postagem?");
         if (confirma){
             return true;
         }else{

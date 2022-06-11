@@ -82,7 +82,7 @@ value="<?php echo $row["Endereco"]; ?>" required>
 
 <div class="divSelect">
     <label for="selectEspecie">Espécie do Animal:</label>
-    <select name="campoEspecie" id="selectEspecie" required>
+    <select name="campoEspecie" id="selectEspecie" onchange="MudaRaca()" required>
         <option value="<?php echo $row["Especie"];?>"><?php echo $row["Especie"];?></option>
         <?php if($row["Especie"] == "Cachorro"){
         ?>
@@ -110,7 +110,36 @@ value="<?php echo $row["Endereco"]; ?>" required>
 <div class="divSelect">
     <label for="selectRaca">Raça do animal:</label>
     <select name="campoRaca" id="selectRaca" required>
+    <?php if($row["Especie"] == "Cachorro"){
+        ?>
         <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Border Collie">Border Collie</option>
+        <option value="Bulldog Francês">Bulldog Francês</option>
+        <option value="Golden Retriever">Golden Retriever</option>
+        <option value="Pug">Pug</option>
+        <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+        <?php
+    }else if($row["Especie"] == "Gato"){
+        ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Angorá">Angorá</option>
+        <option value="British Shorthair">British Shorthair</option>
+        <option value="Himalaio">Himalaio</option>
+        <option value="Maine Coon">Maine Coon</option>
+        <option value="Persa">Persa</option>
+        <?php
+    }else{
+    ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Canário">Canário</option>
+        <option value="Calopsita">Calopsita</option>
+        <option value="Diamante de Gould">Diamante de Gould</option>
+        <option value="Manon">Manon</option>
+        <option value="Periquito">Periquito</option>
+        
+    <?php
+       } 
+    ?>
     </select>
 </div>
 

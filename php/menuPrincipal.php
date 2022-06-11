@@ -11,10 +11,11 @@
     <body>
         <div class="divBackground">
 
-            <?php
-            session_start();
-            unset($_SESSION["id"]);
-            ?>
+        <?php
+        session_start();
+        unset($_SESSION["id"]);
+        unset($_SESSION["idA"]);
+        ?>
     
                 <div class="divLogo"></div>
 

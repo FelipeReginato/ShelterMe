@@ -63,7 +63,7 @@ value="<?php echo $row["Peso"]; ?>" maxlength="20">
 pattern="[a-zA-ZÀ-ž\s]{5,30}" title="Estado entre 5 e 30 letras" required>
 
 
-<input id="troca2" onclick="trocaDate2()" onblur="trocaText2()" max="2022-06-01" name="campoDataEncontro" value="<?php echo $row["DataEncontro"]; ?>"
+<input id="troca2" onclick="trocaDate2()" onblur="trocaText2()" name="campoDataEncontro" value="<?php echo $row["DataEncontro"]; ?>"
 type="text" placeholder="Data de encontro" maxlength="50">
                 
 <input name="campoCidade" type="text" placeholder="Cidade" maxlength="40" value="<?php echo $row["Cidade"]; ?>"
@@ -74,7 +74,7 @@ minlenght="8" maxlength="50" required>
 
 <div class="divSelect">
     <label for="selectEspecie">Espécie do Animal:</label>
-    <select name="campoEspecie" id="selectEspecie" required>
+    <select name="campoEspecie" id="selectEspecie" onchange="MudaRaca()" required>
         <option value="<?php echo $row["Especie"];?>"><?php echo $row["Especie"];?></option>
         <?php if($row["Especie"] == "Cachorro"){
         ?>
@@ -102,7 +102,36 @@ minlenght="8" maxlength="50" required>
 <div class="divSelect">
     <label for="selectRaca">Raça do animal:</label>
     <select name="campoRaca" id="selectRaca" required>
+    <?php if($row["Especie"] == "Cachorro"){
+        ?>
         <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Border Collie">Border Collie</option>
+        <option value="Bulldog Francês">Bulldog Francês</option>
+        <option value="Golden Retriever">Golden Retriever</option>
+        <option value="Pug">Pug</option>
+        <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+        <?php
+    }else if($row["Especie"] == "Gato"){
+        ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Angorá">Angorá</option>
+        <option value="British Shorthair">British Shorthair</option>
+        <option value="Himalaio">Himalaio</option>
+        <option value="Maine Coon">Maine Coon</option>
+        <option value="Persa">Persa</option>
+        <?php
+    }else{
+    ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Canário">Canário</option>
+        <option value="Calopsita">Calopsita</option>
+        <option value="Diamante de Gould">Diamante de Gould</option>
+        <option value="Manon">Manon</option>
+        <option value="Periquito">Periquito</option>
+        
+    <?php
+       } 
+    ?>
     </select>
 </div>
 
@@ -270,7 +299,7 @@ minlenght="8" maxlength="50" required>
 
 <button class="botaoAtualizar" onclick="return validarUpdate()">Atualizar dados</button>
 </form>
-<button class="botaoVoltar" onclick="location.href='listarDadosPubl.php'">Voltar</button>
+<button class="botaoVoltar" onclick="location.href='listarDadosPublAbrigo.php'">Voltar</button>
 </div>
 
 

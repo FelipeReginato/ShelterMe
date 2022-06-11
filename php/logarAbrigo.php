@@ -29,7 +29,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         ?>
         <script>
             alert("Login Incorreto");
-            window.location.replace("loginUsuario.php");
+            window.location.replace("loginAbrigo.php");
             </script>
         <?php
     }

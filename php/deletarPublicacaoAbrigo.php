@@ -8,21 +8,21 @@ if (!$conn) {
 
 $id = $_POST['id'];
 
-$sqlA = "UPDATE animal SET Status = 'Excluido' WHERE CodAnimal = '$id'";
+$sqlA = "UPDATE animalabrigo SET Status = 'Excluido' WHERE CodAnimal = '$id'";
 
-$sql = "DELETE FROM postagem WHERE CodAnimal = '$id'";
+$sql = "DELETE FROM postagemabrigo WHERE CodAnimal = '$id'";
 
 if ($result = mysqli_query($conn, $sql) && $resultA = mysqli_query($conn, $sqlA)) {
     ?>
     <script>
-    window.location.replace("listarDadosPubl.php");
+    window.location.replace("listarDadosPublAbrigo.php");
     alert("Um registro excluído!");
     </script>
     <?php
 } else {
 ?>
     <script>
-    window.location.replace("listarDadosPubl.php");
+    window.location.replace("listarDadosPublAbrigo.php");
     alert("<?php echo "Erro executando DELETE: " . mysqli_error($conn);?>");
     </script>
     <?php

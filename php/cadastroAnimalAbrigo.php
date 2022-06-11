@@ -3,25 +3,23 @@
 <head>
 <meta charset="utf-8">
 	<link rel="stylesheet" href="../css/estilosPaginaAnimalAbrigo.css">
-	
+	<script src="../Scripts/scriptsPaginaAnimal.js"></script>
         
 </head>
 <body>
 
-<?php
-session_start();
-unset($_SESSION["id"]);
-unset($_SESSION["idA"]);
-?>
+
 <div onclick="window.location.href = 'paginaPrincipalAbrigo.php'" class="divLogo"></div>
 <div class="divCadastro"> Cadastrar Animal</div>
     <script>
     function trocaDate2() {
         document.getElementById('troca2').type = 'date';
+        troca2.max = new Date().toISOString().split("T")[0];
     }  
     function trocaText2(){
     document.getElementById('troca2').type = 'text';
     }
+    
     </script>
 <div class="divCampo">
 <form action="../php/executarCadastroAnimalAbrigo.php" method="post">
@@ -33,7 +31,7 @@ unset($_SESSION["idA"]);
 <input name="campoEstado" type="text" placeholder="Estado" maxlength="30" 
 pattern="[a-zA-ZÀ-ž\s]{5,30}" title="Estado entre 5 e 30 letras" required>
 
-<input id = "troca2" onclick="trocaDate2()" onblur="trocaText2()" max="2022-06-01" name="campoDataEncontro" type="text" placeholder="Data de encontro" maxlength="50">
+<input id = "troca2" onclick="trocaDate2()" onblur="trocaText2()" name="campoDataEncontro" type="text" placeholder="Data de encontro" maxlength="50">
 
 <input name="campoCidade" type="text" placeholder="Cidade" maxlength="40"
 pattern="[a-zA-ZÀ-ž\s]{5,40}" title="Cidade entre 5 e 40 letras" required>

@@ -22,14 +22,14 @@ if ($result = mysqli_query($conn, $sql)) {
     ?>
     
     <script>
-    window.location.replace("../paginas/paginaMenuPrincipal.html");
+    window.location.replace("loginAbrigo.php");
     alert("Novo abrigo cadastrado!");
     </script>
     <?php
 } else {
     ?>
     <script>
-    window.location.replace("../paginas/telaLogin.html");
+    window.location.replace("cadastroAbrigo.php");
     alert("<?php echo "Erro executando INSERT: " . mysqli_error($conn);?>");
     </script>
     <?php

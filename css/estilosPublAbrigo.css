@@ -92,7 +92,7 @@ body{
 }
 .botaoEditar:hover{
 
-    background-color: #ff6505;
+    background-color: #24794d;
 
 }
 .botaoExcluir{
@@ -109,7 +109,7 @@ body{
 }
 .botaoExcluir:hover{
 
-    background-color: #ff6505;
+    background-color: #24794d;
 
 }
 .botaoSolucionado{
@@ -126,7 +126,7 @@ body{
 }
 .botaoSolucionado:hover{
 
-    background-color: #ff6505;
+    background-color: #24794d;
 
 }
 .botaoPublicar{
@@ -153,6 +153,6 @@ body{
 }
 .botaoPublicar:hover{
 
-    background-color: #ff6505;
+    background-color: #24794d;
 
 }
