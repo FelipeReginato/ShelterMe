@@ -30,6 +30,10 @@
                     <button class="botaoCadastro" onclick="window.location.href = '../php/cadastroUsuario.php'">
                         Ir para Cadastro
                     </button>
+
+                    <button class="botaoCadastro" onclick="window.location.href = '../php/cadastroAbrigo.php'">
+                        Ir para Cadastro de Abrigo
+                    </button>
                     
                 </div>
             </div>

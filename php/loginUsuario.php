@@ -39,6 +39,7 @@
                     
                     <button> Entrar </button>
                 </form>
+                <a href="loginAbrigo.php" >Ir para login de Abrigo</a>
             </div>
     
          
