@@ -5,6 +5,7 @@ $nome = $_POST['nome'];
 $email = $_POST['email'];
 $senha = md5($_POST['senha']);
 
+
 $conn = mysqli_connect($servername, $username, $password, $database);
 
 if (!$conn) {
