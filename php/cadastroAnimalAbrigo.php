@@ -31,30 +31,28 @@ unset($_SESSION["idA"]);
 <input name="campoPeso" type="text" placeholder="Peso (Opcional)" maxlength="20">
 
 <input name="campoEstado" type="text" placeholder="Estado" maxlength="30" 
-pattern="[a-zA-Z]{5,30}" title="Estado entre 5 e 30 letras" required>
+pattern="[a-zA-ZÀ-ž\s]{5,30}" title="Estado entre 5 e 30 letras" required>
 
-<input id = "troca2" onclick="trocaDate2()" onblur="trocaText2()" name="campoDataEncontro" type="text" placeholder="Data de encontro" maxlength="50">
+<input id = "troca2" onclick="trocaDate2()" onblur="trocaText2()" max="2022-06-01" name="campoDataEncontro" type="text" placeholder="Data de encontro" maxlength="50">
 
 <input name="campoCidade" type="text" placeholder="Cidade" maxlength="40"
-pattern="[a-zA-Z]{5,40}" title="Cidade entre 5 e 40 letras" required>
+pattern="[a-zA-ZÀ-ž\s]{5,40}" title="Cidade entre 5 e 40 letras" required>
                 
 <input name="campoEndereco" type="text" placeholder="Endereço" minlenght="8" maxlength="50" required>
 
 <div class="divSelect">
     <label for="selectEspecie">Espécie do Animal:</label>
-        <select name="campoEspecie" id="selectEspecie" required>
+        <select name="campoEspecie" onchange="MudaRaca()" id="selectEspecie" required>
             <option></option>
             <option value="Cachorro">Cachorro</option>
             <option value="Gato">Gato</option>
-            <option value="Passáro">Passáro</option>
+            <option value="Pássaro">Pássaro</option>
         </select>
 </div>
 
 <div class="divSelect">
     <label for="selectRaca">Raça do Animal:</label>
         <select name="campoRaca" id="selectRaca" required>
-            <option></option>
-            <option value="teste">Teste</option>
         </select>
 </div>
 
@@ -78,9 +76,9 @@ pattern="[a-zA-Z]{5,40}" title="Cidade entre 5 e 40 letras" required>
     <label for="selectIdade">Idade do Animal:</label>
         <select name="campoIdade" id="selectIdade" required>
             <option></option>
-            <option value="Cachorro">Idoso</option>
-            <option value="Gato">Adulto</option>
-            <option value="Passáro">Filhote</option>
+            <option value="Idoso">Idoso</option>
+            <option value="Adulto">Adulto</option>
+            <option value="Filhote">Filhote</option>
         </select>
 </div>
 
@@ -98,9 +96,9 @@ pattern="[a-zA-Z]{5,40}" title="Cidade entre 5 e 40 letras" required>
     <label for="selectPorte">Porte do Animal:</label>
         <select name="campoPorte" id="selectPorte" required>
             <option></option>
-            <option value="Cachorro">Grande</option>
-            <option value="Gato">Médio</option>
-            <option value="Passáro">Pequeno</option>
+            <option value="Grande">Grande</option>
+            <option value="Médio">Médio</option>
+            <option value="Pequeno">Pequeno</option>
         </select>
 </div>
 

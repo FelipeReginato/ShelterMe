@@ -36,6 +36,7 @@
                     pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,40}" 
                     title="Senha entre 6 e 40 caracteres, com letra maiúscula, minúscula e número" required> <br>
 
+                    
                     <button> Entrar </button>
                 </form>
             </div>

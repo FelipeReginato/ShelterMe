@@ -87,17 +87,17 @@ value="<?php echo $row["Endereco"]; ?>" required>
         <?php if($row["Especie"] == "Cachorro"){
         ?>
         <option value="Gato">Gato</option>
-        <option value="Passáro">Passáro</option>
+        <option value="Pássaro">Pássaro</option>
         <?php
     }else if($row["Especie"] == "Gato"){
         ?>
         <option value="Cachorro">Cachorro</option>
-        <option value="Passáro">Passáro</option>
+        <option value="Pássaro">Pássaro</option>
         <?php
     }else{
     ?>
     <option value="Gato">Gato</option>
-    <option value="Passáro">Passáro</option>
+    <option value="Pássaro">Pássaro</option>
     <?php
    } 
    ?>    
