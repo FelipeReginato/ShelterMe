@@ -75,13 +75,14 @@ button:hover{
 }
  
 .divLogo{
-        height: 13%;
-        width: 6.3%;
-        background-repeat: no-repeat;
-        margin-top: 11px;
-        margin-left: 18px;
-        position: absolute;
-        cursor: pointer;
+        height: 120px;
+    width: 120px;
+    background-image: url(../imagens/ShelterMELogoAbrigo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-left: 35px;
+    margin-top: 20px;
+    cursor: pointer;
         
 }
     

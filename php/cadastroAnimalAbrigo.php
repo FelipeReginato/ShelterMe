@@ -13,7 +13,7 @@ session_start();
 unset($_SESSION["id"]);
 unset($_SESSION["idA"]);
 ?>
-<div onclick="window.location.href = 'paginaPrincipal.php'" class="divLogo"></div>
+<div onclick="window.location.href = 'paginaPrincipalAbrigo.php'" class="divLogo"></div>
 <div class="divCadastro"> Cadastrar Animal</div>
     <script>
     function trocaDate2() {

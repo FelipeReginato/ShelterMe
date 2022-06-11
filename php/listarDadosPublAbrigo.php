@@ -2,12 +2,12 @@
 <html>
 <head>
 <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/estilosPubl.css">
+        <link rel="stylesheet" href="../css/estilosPublAbrigo.css">
         
 </head>
 <body>
     
-<div onclick="window.location.href = 'paginaPrincipal.php'" class="divLogo"></div>
+<div onclick="window.location.href = 'paginaPrincipalAbrigo.php'" class="divLogo"></div>
    
 
 

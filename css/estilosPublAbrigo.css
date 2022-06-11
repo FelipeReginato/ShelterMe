@@ -1,0 +1,158 @@
+*{margin: 0; padding: 0;}
+
+.divLogo{
+    height: 120px;
+    width: 120px;
+    background-image: url(../imagens/ShelterMELogoAbrigo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-left: 35px;
+    margin-top: 20px;
+    cursor: pointer;
+    
+}
+body{
+
+    background-image: url(../imagens/background2.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.imagemSelecionada{
+    width: 200px;
+}
+.trDados{
+
+    
+    width: 300px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    
+
+}
+.tdDados{
+    
+    padding-top: 7px;
+    width: auto;
+    height: 30px;
+    display: flex; 
+    border: 2.3px solid #4AB880;
+    border-radius: 10px;
+    margin: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color: black;
+    
+
+}
+
+
+.tableDados{
+    float: left;
+    margin-left: 20px;
+    margin-top: 40px;
+    height: 400px;
+    width: 300px;
+    border: 3px black solid;
+    background-image: url(../imagens/patinhas.jpg);
+    background-size: 50%;
+    border-radius: 18px;
+
+}
+
+.tdDadosAcao{
+ 
+    width: 290px;
+    height: 30px;
+    display: flex; 
+    border: 2.3px solid ;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #4AB880;
+    
+
+
+}
+
+.botaoEditar{
+
+    height: 30px;
+    width: 290px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4AB880;
+ 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+
+}
+.botaoEditar:hover{
+
+    background-color: #ff6505;
+
+}
+.botaoExcluir{
+    height: 30px;
+    width: 290px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4AB880;
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+.botaoExcluir:hover{
+
+    background-color: #ff6505;
+
+}
+.botaoSolucionado{
+    height: 30px;
+    width: 290px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4AB880;
+   
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+.botaoSolucionado:hover{
+
+    background-color: #ff6505;
+
+}
+.botaoPublicar{
+    height: 50px;
+    width: 550px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #4AB880;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+ 
+}
+
+.divBotao{
+
+    height: 50px;
+    width: 450px;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.botaoPublicar:hover{
+
+    background-color: #ff6505;
+
+}

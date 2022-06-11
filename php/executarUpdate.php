@@ -6,6 +6,7 @@ if (!$conn) {
     die("Falha na conexão com o Banco de Dados: " . mysqli_connect_error());
 }
 
+
 $especie = $_POST['campoEspecie'];
 $raca = $_POST['campoRaca'];
 $sexo = $_POST['campoSexo'];

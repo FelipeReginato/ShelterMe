@@ -4,10 +4,9 @@ body{
     background-repeat: no-repeat;
 }
 
-
 .divCampo{
 
-    height: 520px;
+    
     width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -15,11 +14,12 @@ body{
     border-radius: 15px;
     background-color:rgba(255, 255, 255, 0.6);
     padding-top: 25px;
+    padding-bottom: 25px;
     
 }
 input {
 
-    width: 41.3%;
+    width: 42%;
     border: 2px solid #4AB880;
     border-radius: 10px;
     margin-left: 20px;
@@ -27,6 +27,11 @@ input {
     padding: 10px;
     outline: 0px;
 
+}
+
+.inputEmail {
+
+    width: 91%;
 }
 
 .divSelect{
@@ -54,11 +59,10 @@ select{
    
 }
 
-
 .botaoEnviar{
 
     width: 85%;
-    border: 2px solid black;
+    border: 2px solid #4AB880;
     border-radius: 10px;
     padding: 10px;
     margin-left: 50px;
@@ -66,14 +70,8 @@ select{
     cursor: pointer;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 17px;
-    background-color: #4AB880;
-    color: white;
 }
-button:hover{
 
-    background-color: #ff6505;
-
-}
 
 ::placeholder{
 
@@ -82,24 +80,51 @@ button:hover{
 
 }
 
-.divCadastro{
+
+
+
+
+.botaoAtualizar{
+    border-left: 10px;
+    margin-left: 90px;
+    margin-top: 25px;
+    padding: 15px;
+    width: 503px;
+    background-color: #4AB880;
+    border: 2px solid black;
+    border-radius: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.botaoVoltar{
+    border-left: 10px;
+    margin-left: 90px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 503px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} 
+
+button:hover{
+
+    background-color: white;
+    color: #4AB880;
+    border: 2px solid #4AB880;
+    cursor: pointer;
+}
+
+.divAtualizar{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 40px;
     text-align: center;
     margin-top: 20px;
     color: black;
-
-}
-.divLogo{
-    height: 130px;
-    width: 120px;
-    background-image: url(../imagens/ShelterMELogoAbrigo.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin-left: 20px;
-    margin-top: 15px;
-    position: absolute;
-    cursor: pointer;
-    
-    
 }

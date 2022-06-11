@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/../css/estiloUpdtPubl.css">
+        <link rel="stylesheet" href="../css/estiloUpdtPublAbrigo.css">
         <script src="../Scripts/scriptsPaginaAnimal.js"></script>
 </head>
 <body>
@@ -17,7 +17,7 @@ if (!$conn) {
 $id = $_POST['id'];
 $idU = $_POST['idU'];
 
-$result = mysqli_query($conn,"SELECT * FROM animal WHERE CodAnimal = $id");
+$result = mysqli_query($conn,"SELECT * FROM animalabrigo WHERE CodAnimal = $id");
 $resultU = mysqli_query($conn,"SELECT * FROM abrigo WHERE CodAbrigo = $idU");
 $row = mysqli_fetch_assoc($result);
 $rowU = mysqli_fetch_assoc($resultU);
@@ -40,7 +40,7 @@ $rowU = mysqli_fetch_assoc($resultU);
 
 <div class="divAtualizar">Atualizar Dados</div>
 <div class="divCampo">
-<form action="executarUpdate.php" method="post">
+<form action="executarUpdateAbrigo.php" method="post">
 
 <input type="hidden" name="id" value="<?php echo $id; ?>">
 
@@ -247,7 +247,7 @@ minlenght="8" maxlength="50" required>
 <div class="divSelect">
     <label for="selectPorte">Porte do Animal:</label>
         <select name="campoPorte" id="selectPorte" required>
-            <option value="<?php echo $row["Porte"];?>"><?php echo $row["Porte"];?></option>
+        <option value="<?php echo $row["Porte"];?>"><?php echo $row["Porte"];?></option>
             <?php if($row["Porte"] == "Grande"){
         ?>
         <option value="Médio">Médio</option>
