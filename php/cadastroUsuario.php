@@ -32,12 +32,12 @@ unset($_SESSION["idA"]);
         type="text" placeholder="Data de nascimento" required> <br>
 
         <input  type="password" placeholder="Senha" maxlength="40" name="senha" id="senha"
-        pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,40}" 
-        title="Senha entre 6 e 40 caracteres, com letra maiúscula, minúscula e número" required> <br>
+        pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{5,40}" 
+        title="Senha entre 5 e 40 caracteres, com letra maiúscula, minúscula e número" required> <br>
 
         <input  type="password" placeholder="Confirmar Senha" maxlength="40" name="senha2" id="senha2"
-        pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,40}" 
-        title="Senha entre 6 e 40 caracteres, com letra maiúscula, minúscula e número" required> <br>
+        pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{5,40}" 
+        title="Senha entre 5 e 40 caracteres, com letra maiúscula, minúscula e número" required> <br>
 
         <button> Entrar </button>
     </div>
