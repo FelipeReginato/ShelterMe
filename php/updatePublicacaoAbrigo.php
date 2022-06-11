@@ -104,30 +104,139 @@ minlenght="8" maxlength="50" required>
     <select name="campoRaca" id="selectRaca" required>
     <?php if($row["Especie"] == "Cachorro"){
         ?>
+        <?php if($row["Raca"] == "Border Collie"){
+        ?>
         <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
-        <option value="Border Collie">Border Collie</option>
         <option value="Bulldog Francês">Bulldog Francês</option>
         <option value="Golden Retriever">Golden Retriever</option>
         <option value="Pug">Pug</option>
         <option value="Yorkshire Terrier">Yorkshire Terrier</option>
         <?php
-    }else if($row["Especie"] == "Gato"){
+        }else if($row["Raca"] == "Bulldog Francês"){
         ?>
         <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
-        <option value="Angorá">Angorá</option>
+        <option value="Border Collie">Border Collie</option>
+        <option value="Golden Retriever">Golden Retriever</option>
+        <option value="Pug">Pug</option>
+        <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+        <?php
+        }else if($row["Raca"] == "Golden Retriever"){
+        ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Border Collie">Border Collie</option>
+        <option value="Bulldog Francês">Bulldog Francês</option>
+        <option value="Pug">Pug</option>
+        <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+        <?php
+        }else if($row["Raca"] == "Pug"){
+         ?>
+         <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Border Collie">Border Collie</option>
+        <option value="Bulldog Francês">Bulldog Francês</option>
+        <option value="Golden Retriever">Golden Retriever</option>
+        <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+        <?php
+        }else if($row["Raca"] == "Yorkshire Terrier"){
+         ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Border Collie">Border Collie</option>
+        <option value="Bulldog Francês">Bulldog Francês</option>
+        <option value="Golden Retriever">Golden Retriever</option>
+        <option value="Pug">Pug</option>
+        <?php
+        }
+        ?>
+        <?php
+    }else if($row["Especie"] == "Gato"){
+        ?>
+        <?php if($row["Raca"] == "Angorá"){
+        ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
         <option value="British Shorthair">British Shorthair</option>
         <option value="Himalaio">Himalaio</option>
         <option value="Maine Coon">Maine Coon</option>
         <option value="Persa">Persa</option>
         <?php
+        }else if($row["Raca"] == "British Shorthair"){
+        ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Angorá">Angorá</option>
+        <option value="Himalaio">Himalaio</option>
+        <option value="Maine Coon">Maine Coon</option>
+        <option value="Persa">Persa</option>
+        <?php
+        }else if($row["Raca"] == "Himalaio"){
+        ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Angorá">Angorá</option>
+        <option value="British Shorthair">British Shorthair</option>
+        <option value="Maine Coon">Maine Coon</option>
+        <option value="Persa">Persa</option>
+        <?php
+        }else if($row["Raca"] == "Maine Coon"){
+         ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Angorá">Angorá</option>
+        <option value="British Shorthair">British Shorthair</option>
+        <option value="Himalaio">Himalaio</option>
+        <option value="Persa">Persa</option>
+        <?php
+        }else if($row["Raca"] == "Persa"){
+         ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Angorá">Angorá</option>
+        <option value="British Shorthair">British Shorthair</option>
+        <option value="Himalaio">Himalaio</option>
+        <option value="Maine Coon">Maine Coon</option>
+        <?php
+        }
+        ?>
+        <?php
     }else{
     ?>
+
+        <?php if($row["Raca"] == "Canário"){
+        ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Calopsita">Calopsita</option>
+        <option value="Diamante de Gould">Diamante de Gould</option>
+        <option value="Manon">Manon</option>
+        <option value="Periquito">Periquito</option>
+        <?php
+        }else if($row["Raca"] == "Calopsita"){
+        ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Canário">Canário</option>
+        <option value="Diamante de Gould">Diamante de Gould</option>
+        <option value="Manon">Manon</option>
+        <option value="Periquito">Periquito</option>
+        <?php
+        }else if($row["Raca"] == "Diamante de Gould"){
+        ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Canário">Canário</option>
+        <option value="Calopsita">Calopsita</option>
+        <option value="Manon">Manon</option>
+        <option value="Periquito">Periquito</option>
+        <?php
+        }else if($row["Raca"] == "Manon"){
+         ?>
+        <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
+        <option value="Canário">Canário</option>
+        <option value="Calopsita">Calopsita</option>
+        <option value="Diamante de Gould">Diamante de Gould</option>
+        <option value="Periquito">Periquito</option>
+        <?php
+        }else if($row["Raca"] == "Periquito"){
+         ?>
         <option value="<?php echo $row["Raca"];?>"><?php echo $row["Raca"];?></option>
         <option value="Canário">Canário</option>
         <option value="Calopsita">Calopsita</option>
         <option value="Diamante de Gould">Diamante de Gould</option>
         <option value="Manon">Manon</option>
-        <option value="Periquito">Periquito</option>
+        <?php
+        }
+        ?>
         
     <?php
        } 
