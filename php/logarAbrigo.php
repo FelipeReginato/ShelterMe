@@ -21,7 +21,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         ?>
             
             <script>
-            window.location.replace("../php/paginaPrincipalAbrigo.php");
+            window.location.replace("paginaPrincipalAbrigo.php");
             </script>
         <?php
 }
