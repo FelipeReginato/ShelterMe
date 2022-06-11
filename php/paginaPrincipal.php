@@ -221,7 +221,7 @@ while ($row = mysqli_fetch_assoc($resultA)) {
 <?php
 }
 
-mysqli_close($con);
+mysqli_close($conn);
 ?>
 
         </div>
