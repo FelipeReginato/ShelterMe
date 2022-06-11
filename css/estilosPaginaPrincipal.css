@@ -18,11 +18,9 @@ body{
   box-shadow: 2px 0 18px black;
   position: fixed;
   z-index: 2;
-  
- 
-
 
 }
+
 .Icones{
   height: 60%;
   width: 60%;
@@ -30,43 +28,55 @@ body{
   cursor: pointer;
   
 }
-.trDados{
 
-    
+.trDados{
+  
   width: 300px;
   height: 100px;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 20px;
-  
+
 
 }
-.tdDados{
-  
+.tdDadosUsuario{
+  text-align: center;
   padding-top: 7px;
   width: auto;
   height: 30px;
   display: flex; 
   border: 2.3px solid #FF914D;
   border-radius: 10px;
-  margin: 10px;
+  margin: 15px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 18px;
+  font-size: 10px;
   color: black;
-  
-
+}
+.tdDadosAbrigo{
+  text-align: center;
+  padding-top: 7px;
+  width: auto;
+  height: 30px;
+  display: flex; 
+  border: 2.3px solid #4AB880;
+  border-radius: 10px;
+  margin: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 10px;
+  color: black;
 }
 
 
 .tableDados{
+  
   float: left;
   margin-left: 20px;
   margin-top: 80px;
-  height: 400px;
-  width: 300px;
+  height: auto;
+  width: 250px;
   border: 3px black solid;
-  background-image: url(../imagens/patinhas.jpg);
   background-size: 50%;
   border-radius: 18px;
+  
 
 }
 
@@ -136,7 +146,7 @@ body{
   position: absolute;
   z-index: 1;
   color: black;
-  margin-top: 670%;
+  margin-top: 420%;
   
 }
 
@@ -155,4 +165,32 @@ body{
 }
 .divPublicacoes{
   margin-left: 100px;
+}
+.CorUsuario{
+
+  padding-top: 40%;
+  height: 9%;
+  width: 100%;
+  position: relative;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ;
+  font-size: 12;
+  z-index: 1;
+  border-top: 2px solid #FF914D;
+  border-bottom: 2px solid #FF914D;
+  color: #FF914D;
+}
+
+.CorAbrigo{
+
+  padding-top: 40%;
+  height: 9%;
+  width: 100%;
+  position: relative;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ;
+  font-size: 12;
+  z-index: 1;
+  border-top: 2px solid #4AB880;
+  border-bottom: 2px solid #4AB880;
+  color: #4AB880;
+ 
 }

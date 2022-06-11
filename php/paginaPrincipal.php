@@ -15,6 +15,9 @@
       
             <li class="liMenu"><img src="../imagens/AboutUs.png" class="Icones" title="AboutUS"> </li>
 
+            <h3 class= "CorAbrigo">Cor publicação (Abrigo)</h3>
+            <h3 class= "CorUsuario">Cor publicação (Usuario)</h3>
+
             <li class="liMenuSair"><img src="../imagens/Desconectar.png" class="Icones" title="Desconectar" onclick="location.href='menuPrincipal.php'"></li>
 
         </ol>
@@ -60,72 +63,73 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 	$dataFinalStatus = $dia.'/'.$mes.'/'.$ano;
     ?> 
-
+              
         <table class="tableDados"> 
+         
         <tr class="trDados">
-
-        <td class= "tdDados">
+       
+        <td class= "tdDadosUsuario">
         <label><b>Contato:</b></label>
         <?php echo $row["Email"]; ?> 
         </td>
         
-        <td class= "tdDados">
+        <td class= "tdDadosUsuario">
         <label><b>Nome:</b></label>
         <?php echo $row["Nome"]; ?> 
         </td>
         
-        <td class= "tdDados">
+        <td class= "tdDadosUsuario">
         <label><b>Especie:</b></label>
         <?php echo $row["Especie"]; ?> 
         </td>
         
-        <td class= "tdDados">
+        <td class= "tdDadosUsuario">
         <label><b>Raça:</b></label>
         <?php echo $row["Raca"]; ?> 
         </td>
         
-        <td class= "tdDados">
+        <td class= "tdDadosUsuario">
         <label><b>Especs:</b></label>
         <?php echo $row["Especs"]; ?> 
         </td>
         
-        <td class= "tdDados">
+        <td class= "tdDadosUsuario">
         <label><b>Peso:</b></label>
         <?php echo $row["Peso"]; ?> 
         </td>
         
-        <td class= "tdDados">
+        <td class= "tdDadosUsuario">
         <label><b>Sexo:</b></label>
         <?php echo $row["Sexo"]; ?> 
         </td>
         
-        <td class= "tdDados">
+        <td class= "tdDadosUsuario">
         <label><b>Estado:</b></label>
         <?php echo $row["Estado"]; ?> 
         </td>
         
-        <td class= "tdDados">
+        <td class= "tdDadosUsuario">
         <label><b>Cidade:</b></label>
         <?php echo $row["Cidade"]; ?> 
         </td>
         
-        <td class= "tdDados">
+        <td class= "tdDadosUsuario">
         <label><b>Status:</b></label>
         <?php echo $row["Status"]; ?> 
         </td>
         
-        <td class= "tdDados">
+        <td class= "tdDadosUsuario">
         <label><b>Endereço:</b></label>
         <?php echo $row["Endereco"]; ?> 
         </td>
 
-        <td class= "tdDados">
+        <td class= "tdDadosUsuario">
         
         <label><b>Data de Nascimento:</b></label>
         <?php echo $dataFinalNasc; ?>
         </td>
         
-        <td class= "tdDados">
+        <td class= "tdDadosUsuario">
         <label><b>Data Perda/Encontro:</b></label>
         <?php echo $dataFinalStatus; ?> 
         </td>
@@ -148,70 +152,67 @@ while ($row = mysqli_fetch_assoc($resultA)) {
 
     <table class="tableDados"> 
     <tr class="trDados">
-
-    <td class= "tdDados">
+    <td class= "tdDadosAbrigo">
     <label><b>Contato:</b></label>
     <?php echo $row["Email"]; ?> 
     </td>
     
-    <td class= "tdDados">
+    <td class= "tdDadosAbrigo">
     <label><b>Nome:</b></label>
     <?php echo $row["Nome"]; ?> 
     </td>
     
-    <td class= "tdDados">
+    <td class= "tdDadosAbrigo">
     <label><b>Especie:</b></label>
     <?php echo $row["Especie"]; ?> 
     </td>
     
-    <td class= "tdDados">
+    <td class= "tdDadosAbrigo">
     <label><b>Raça:</b></label>
     <?php echo $row["Raca"]; ?> 
     </td>    
     
-    <td class= "tdDados">
+    <td class= "tdDadosAbrigo">
     <label><b>Porte:</b></label>
     <?php echo $row["Porte"]; ?> 
     </td>
     
-    <td class= "tdDados">
+    <td class= "tdDadosAbrigo">
     <label><b>Peso:</b></label>
     <?php echo $row["Peso"]; ?> 
     </td>
     
-    <td class= "tdDados">
+    <td class= "tdDadosAbrigo">
     <label><b>Sexo:</b></label>
     <?php echo $row["Sexo"]; ?> 
     </td>
     
-    <td class= "tdDados">
+    <td class= "tdDadosAbrigo">
     <label><b>Estado:</b></label>
     <?php echo $row["Estado"]; ?> 
     </td>
     
-    <td class= "tdDados">
+    <td class= "tdDadosAbrigo">
     <label><b>Cidade:</b></label>
     <?php echo $row["Cidade"]; ?> 
     </td>
     
-    <td class= "tdDados">
+    <td class= "tdDadosAbrigo">
     <label><b>Endereço:</b></label>
     <?php echo $row["Endereco"]; ?> 
     </td>
 
-    <td class= "tdDados">
-
-    <td class= "tdDados">
+    <td class= "tdDadosAbrigo">
     <label><b>Cor:</b></label>
     <?php echo $row["Cor"]; ?> 
     </td>
     
-    <td class= "tdDados">
+    <td class= "tdDadosAbrigo">
     <label><b>Idade:</b></label>
     <?php echo $row["Idade"]; ?> 
     </td>
 
-    <td class= "tdDados">
+    <td class= "tdDadosAbrigo">
     <label><b>Data de Nascimento:</b></label>
     <?php echo $dataFinalEncontro; ?>
     </td>
