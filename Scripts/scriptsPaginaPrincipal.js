@@ -12,3 +12,28 @@ function AparecerOpcoes(){
       }
     
 }
+function TirarPublUsu(){
+    var publ = document.getElementById('postUsu');
+    var x = document.getElementById('tiraAbr');
+    if(publ.style.display != 'none'){
+        publ.style.display = 'none';
+        x.style.pointerEvents = 'none';
+    }
+    else{
+        publ.style.display = '';
+        x.style.pointerEvents = '';
+    }
+}
+
+function TirarPublAbrigo(){
+    var publ = document.getElementById('postAbrigo');
+    var x = document.getElementById('tiraUsu');
+    if(publ.style.display != 'none'){
+        publ.style.display = 'none';
+        x.style.pointerEvents = 'none';
+    }
+    else{
+        publ.style.display = '';
+        x.style.pointerEvents = '';
+    }
+}

@@ -15,8 +15,8 @@
       
             <li class="liMenu"><img src="../imagens/AboutUs.png" class="Icones" title="AboutUS"> </li>
 
-            <h3 class= "CorAbrigo">Cor publicação (Abrigo)</h3>
-            <h3 class= "CorUsuario">Cor publicação (Usuario)</h3>
+            <h3 class= "CorAbrigo" id="tiraUsu" onclick="TirarPublUsu()">Cor publicação (Abrigo)</h3>
+            <h3 class= "CorUsuario" id="tiraAbr" onclick="TirarPublAbrigo()">Cor publicação (Usuario)</h3>
 
             <li class="liMenuSair"><img src="../imagens/Desconectar.png" class="Icones" title="Desconectar" onclick="location.href='menuPrincipal.php'"></li>
 
@@ -46,6 +46,11 @@ INNER JOIN pessoa p ON p.CodPessoa = o.CodPessoa");
 $resultA = mysqli_query($conn,"SELECT a.Email,aa.* FROM postagemabrigo o
 INNER JOIN animalabrigo aa ON aa.CodAnimal = o.CodAnimal
 INNER JOIN abrigo a ON a.CodAbrigo = o.CodAbrigo");
+
+?>
+
+<span id="postUsu">
+<?php
 
 while ($row = mysqli_fetch_assoc($result)) {
     
@@ -135,7 +140,9 @@ while ($row = mysqli_fetch_assoc($result)) {
         </td>
 
         </table>
+</span>
 
+<span id="postAbrigo">
 	<?php
 }
 
@@ -218,7 +225,7 @@ while ($row = mysqli_fetch_assoc($resultA)) {
     </td>
     
     </table>
-
+</span>
 <?php
 }
 
