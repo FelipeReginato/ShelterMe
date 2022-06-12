@@ -13,7 +13,7 @@
 
             <li class="liMenuPrimeiro"> <img src="../imagens/PataIcone.png"  onclick="AparecerOpcoes()" class="Icones" title="Funções com o Animal" ></li>
       
-            <li class="liMenu"><img src="../imagens/AboutUs.png" class="Icones" title="AboutUS"> </li>
+            <li class="liMenu"><img src="../imagens/AboutUs.png" class="Icones" title="AboutUS" onclick="location.href='../paginas/AboutUs.html'"> </li>
 
             <h3 class= "CorAbrigo" id="tiraUsu" onclick="TirarPublUsu()">Cor publicação (Abrigo)</h3>
             <h3 class= "CorUsuario" id="tiraAbr" onclick="TirarPublAbrigo()">Cor publicação (Usuario)</h3>
