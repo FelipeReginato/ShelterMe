@@ -12,8 +12,10 @@ session_start();
 unset($_SESSION["id"]);
 unset($_SESSION["idA"]);
 ?>
-<img src="../imagens/LogoSemShelter.png" onclick="window.location.href = '../php/menuPrincipal.php'" class="divLogo" title="Voltar">
+<img src="../imagens/ShelterMELogoAbrigo.png" onclick="window.location.href = '../php/menuPrincipal.php'" class="divLogo" title="Voltar">
 <form action="../php/executarCadastroAbrigo.php" method="post">
+<div class="divCadastro">
+        <div class="divMensagemCadastro">  Cadastro </div>
     <input  type="text" placeholder="Nome do Abrigo" minlength="4" maxlength="60" name="nome" required > <br>
 
     <input  type="text" placeholder="E-mail" maxlength="60" name="email" 
@@ -40,6 +42,7 @@ unset($_SESSION["idA"]);
     title="Senha entre 5 e 40 caracteres, com letra maiúscula, minúscula e número" required> <br>
 
     <button> Entrar </button>
+    </div>
 </form>
 </div>
 </body>

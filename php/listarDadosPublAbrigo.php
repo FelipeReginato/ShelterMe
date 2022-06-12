@@ -42,12 +42,13 @@ if (!$conn) {
 session_start();
 $id = $_SESSION["idA"];
 
-$resultA = mysqli_query($conn,"SELECT a.*,aa.* FROM postagemabrigo o
-INNER JOIN animalabrigo aa ON aa.CodAnimal = o.CodAnimal
-INNER JOIN abrigo a ON a.CodAbrigo = o.CodAbrigo");
+
+$result = mysqli_query($conn,"SELECT * FROM animalabrigo WHERE CodAnimal IN (SELECT CodAnimal FROM postagemabrigo WHERE CodAbrigo = '$id')");
+$resultU = mysqli_query($conn,"SELECT * FROM abrigo WHERE CodAbrigo = '$id'");
+$rowU = mysqli_fetch_assoc($resultU);
 
 
-while ($row = mysqli_fetch_assoc($resultA)) {
+while ($row = mysqli_fetch_assoc($result)) {
 
     $strData = explode('-',$row["DataEncontro"]);
     $ano = $strData[2];
@@ -63,7 +64,7 @@ while ($row = mysqli_fetch_assoc($resultA)) {
 
     <td class= "tdDados">
     <label><b>Contato:</b></label>
-    <?php echo $row["Email"]; ?> 
+    <?php echo $rowU["Email"]; ?> 
     </td>
     
     <td class= "tdDados">
