@@ -12,10 +12,8 @@ session_start();
 unset($_SESSION["id"]);
 unset($_SESSION["idA"]);
 ?>
-<img src="../imagens/ShelterMELogoAbrigo.png" onclick="window.location.href = '../php/menuPrincipal.php'" class="divLogo" title="Voltar">
+<img src="../imagens/LogoSemShelter.png" onclick="window.location.href = '../php/menuPrincipal.php'" class="divLogo" title="Voltar">
 <form action="../php/executarCadastroAbrigo.php" method="post">
-<div class="divCadastro">
-<div class="divMensagemCadastro">  Cadastro </div>
     <input  type="text" placeholder="Nome do Abrigo" minlength="4" maxlength="60" name="nome" required > <br>
 
     <input  type="text" placeholder="E-mail" maxlength="60" name="email" 
@@ -34,15 +32,14 @@ unset($_SESSION["idA"]);
     <input name="campoEndereco" type="text" placeholder="Endereço do abrigo" minlenght="8" maxlength="50" required> <br>
 
     <input  type="password" placeholder="Senha" maxlength="40" name="senha" id="senha"
-    pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,40}" 
-    title="Senha entre 6 e 40 caracteres, com letra maiúscula, minúscula e número" required> <br>
+    pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{5,40}" 
+    title="Senha entre 5 e 40 caracteres, com letra maiúscula, minúscula e número" required> <br>
 
     <input  type="password" placeholder="Confirmar Senha" maxlength="40" name="senha2" id="senha2"
-    pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,40}" 
-    title="Senha entre 6 e 40 caracteres, com letra maiúscula, minúscula e número" required> <br>
+    pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{5,40}" 
+    title="Senha entre 5 e 40 caracteres, com letra maiúscula, minúscula e número" required> <br>
 
     <button> Entrar </button>
-    </div>
 </form>
 </div>
 </body>
