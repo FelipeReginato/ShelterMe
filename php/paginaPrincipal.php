@@ -11,7 +11,7 @@
     <body>
         <ol class="Menu">
 
-            <li class="liMenuPrimeiro"> <img src="../imagens/PataIcone.png"  onclick="AparecerOpcoes()" class="Icones" title="Funções com o Animal" ></li>
+            <li class="liMenuPrimeiro"> <img src="../imagens/PataIcone.png" onclick="AparecerOpcoes()" class="Icones" title="Funções com o Animal" ></li>
       
             <li class="liMenu"><img src="../imagens/AboutUs.png" class="Icones" title="AboutUS" onclick="location.href='../paginas/AboutUs.html'"> </li>
 

@@ -37,7 +37,7 @@
                     title="Senha entre 6 e 40 caracteres, com letra maiúscula, minúscula e número" required> <br>
 
                     
-                    <button> Entrar </button>
+                    <button name="Entrar"> Entrar </button>
                 </form>
                 <a href="loginAbrigo.php" >Ir para login de Abrigo</a>
             </div>

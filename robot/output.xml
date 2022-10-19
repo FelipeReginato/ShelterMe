@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221019 20:32:20.736" rpa="false" schemaversion="3">
+<suite id="s1" name="cadastroAnimal" source="C:\xampp\htdocs\ShelterMe\robot\cadastroAnimal.robot">
+<test id="s1-t1" name="Animal Cadastrado" line="8">
+<kw name="Inicia sessão" library="baseCadastroAnimal" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221019 20:32:20.925" level="INFO">Opening browser 'chrome' to base url 'http://localhost/ShelterMe/php/loginUsuario.php'.</msg>
+<status status="PASS" starttime="20221019 20:32:20.925" endtime="20221019 20:32:21.943"/>
+</kw>
+<status status="PASS" starttime="20221019 20:32:20.925" endtime="20221019 20:32:21.943"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221019 20:32:21.944" level="INFO">Opening url 'http://localhost/ShelterMe/php/loginUsuario.php'</msg>
+<status status="PASS" starttime="20221019 20:32:21.944" endtime="20221019 20:32:21.958"/>
+</kw>
+<kw name="Preencher Login">
+<arg>paulinho200</arg>
+<arg>paulinho@bol.com.br</arg>
+<arg>Paulo20</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=nome]</arg>
+<arg>${uname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:21.959" level="INFO">Typing text 'paulinho200' into text field 'css:input[name=nome]'.</msg>
+<status status="PASS" starttime="20221019 20:32:21.958" endtime="20221019 20:32:22.029"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=email]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.029" level="INFO">Typing text 'paulinho@bol.com.br' into text field 'css:input[name=email]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.029" endtime="20221019 20:32:22.090"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=senha]</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.090" level="INFO">Typing text 'Paulo20' into text field 'css:input[name=senha]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.090" endtime="20221019 20:32:22.153"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button[name=Entrar]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.153" level="INFO">Clicking element 'css:button[name=Entrar]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.153" endtime="20221019 20:32:22.263"/>
+</kw>
+<status status="PASS" starttime="20221019 20:32:21.958" endtime="20221019 20:32:22.263"/>
+</kw>
+<kw name="Pagina Principal">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Cor publicação</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221019 20:32:22.273" level="INFO">Current page contains text 'Cor publicação'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.264" endtime="20221019 20:32:22.273"/>
+</kw>
+<status status="PASS" starttime="20221019 20:32:22.264" endtime="20221019 20:32:22.273"/>
+</kw>
+<kw name="Entrar Pagina do Animal">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//img[contains(@src, 'PataIcone.png')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.274" level="INFO">Clicking element 'xpath=//img[contains(@src, 'PataIcone.png')]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.274" endtime="20221019 20:32:22.310"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>class:liCadastrar</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221019 20:32:22.310" endtime="20221019 20:32:22.333"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), "Cadastrar Novo Animal")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.333" level="INFO">Clicking element 'xpath=//*[contains(text(), "Cadastrar Novo Animal")]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.333" endtime="20221019 20:32:22.404"/>
+</kw>
+<status status="PASS" starttime="20221019 20:32:22.274" endtime="20221019 20:32:22.404"/>
+</kw>
+<kw name="Preencher Dados do Animal">
+<arg>Polentinha</arg>
+<arg>Cego de um olho</arg>
+<arg>5 Kgs</arg>
+<arg>Parana</arg>
+<arg>2017-07-30</arg>
+<arg>2022-08-23</arg>
+<arg>Colombo</arg>
+<arg>Rua Sarampo, 700</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=campoNome]</arg>
+<arg>${nomeanm}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.405" level="INFO">Typing text 'Polentinha' into text field 'css:input[name=campoNome]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.405" endtime="20221019 20:32:22.466"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=campoEspcs]</arg>
+<arg>${esp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.467" level="INFO">Typing text 'Cego de um olho' into text field 'css:input[name=campoEspcs]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.466" endtime="20221019 20:32:22.521"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=campoPeso]</arg>
+<arg>${peso}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.521" level="INFO">Typing text '5 Kgs' into text field 'css:input[name=campoPeso]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.521" endtime="20221019 20:32:22.569"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=campoEstado]</arg>
+<arg>${estado}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.570" level="INFO">Typing text 'Parana' into text field 'css:input[name=campoEstado]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.569" endtime="20221019 20:32:22.619"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=campoDataNasc]</arg>
+<arg>${datanasc}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.620" level="INFO">Typing text '2017-07-30' into text field 'css:input[name=campoDataNasc]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.620" endtime="20221019 20:32:22.672"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=campoDataStatus]</arg>
+<arg>${datastatus}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.672" level="INFO">Typing text '2022-08-23' into text field 'css:input[name=campoDataStatus]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.672" endtime="20221019 20:32:22.723"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=campoCidade]</arg>
+<arg>${cidade}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.724" level="INFO">Typing text 'Colombo' into text field 'css:input[name=campoCidade]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.724" endtime="20221019 20:32:22.774"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=campoEndereco]</arg>
+<arg>${endereco}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.774" level="INFO">Typing text 'Rua Sarampo, 700' into text field 'css:input[name=campoEndereco]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.774" endtime="20221019 20:32:22.827"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//option[@value="Cachorro"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.827" level="INFO">Clicking element '//option[@value="Cachorro"]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.827" endtime="20221019 20:32:22.848"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//option[@value="Macho"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.848" level="INFO">Clicking element '//option[@value="Macho"]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.848" endtime="20221019 20:32:22.867"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//option[@value="Perdido"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.868" level="INFO">Clicking element '//option[@value="Perdido"]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.868" endtime="20221019 20:32:22.887"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button[name=Enviar]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:22.887" level="INFO">Clicking element 'css:button[name=Enviar]'.</msg>
+<status status="PASS" starttime="20221019 20:32:22.887" endtime="20221019 20:32:22.938"/>
+</kw>
+<status status="PASS" starttime="20221019 20:32:22.404" endtime="20221019 20:32:22.938"/>
+</kw>
+<kw name="Pagina Principal Animal Cadastrado">
+<msg timestamp="20221019 20:32:22.938" level="FAIL">Keyword 'Pagina Principal Animal Cadastrado' expected 1 argument, got 0.</msg>
+<status status="FAIL" starttime="20221019 20:32:22.938" endtime="20221019 20:32:22.938"/>
+</kw>
+<kw name="Encerra sessão" library="baseCadastroAnimal" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221019 20:32:23.044" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-146.png"&gt;&lt;img src="selenium-screenshot-146.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221019 20:32:22.939" endtime="20221019 20:32:23.044"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221019 20:32:23.045" endtime="20221019 20:32:25.103"/>
+</kw>
+<status status="PASS" starttime="20221019 20:32:22.939" endtime="20221019 20:32:25.103"/>
+</kw>
+<tag>animal_sucesso</tag>
+<status status="FAIL" starttime="20221019 20:32:20.924" endtime="20221019 20:32:25.103">Keyword 'Pagina Principal Animal Cadastrado' expected 1 argument, got 0.</status>
+</test>
+<test id="s1-t2" name="Login invalido" line="17">
+<kw name="Inicia sessão" library="baseCadastroAnimal" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221019 20:32:25.106" level="INFO">Opening browser 'chrome' to base url 'http://localhost/ShelterMe/php/loginUsuario.php'.</msg>
+<status status="PASS" starttime="20221019 20:32:25.105" endtime="20221019 20:32:26.121"/>
+</kw>
+<status status="PASS" starttime="20221019 20:32:25.105" endtime="20221019 20:32:26.121"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221019 20:32:26.122" level="INFO">Opening url 'http://localhost/ShelterMe/php/loginUsuario.php'</msg>
+<status status="PASS" starttime="20221019 20:32:26.122" endtime="20221019 20:32:26.137"/>
+</kw>
+<kw name="Preencher Login">
+<arg>paulinho200</arg>
+<arg>paulinho@bol.com.br</arg>
+<arg>Paulo3000</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=nome]</arg>
+<arg>${uname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:26.138" level="INFO">Typing text 'paulinho200' into text field 'css:input[name=nome]'.</msg>
+<status status="PASS" starttime="20221019 20:32:26.137" endtime="20221019 20:32:26.207"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=email]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:26.207" level="INFO">Typing text 'paulinho@bol.com.br' into text field 'css:input[name=email]'.</msg>
+<status status="PASS" starttime="20221019 20:32:26.207" endtime="20221019 20:32:26.265"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=senha]</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:26.266" level="INFO">Typing text 'Paulo3000' into text field 'css:input[name=senha]'.</msg>
+<status status="PASS" starttime="20221019 20:32:26.265" endtime="20221019 20:32:26.324"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button[name=Entrar]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221019 20:32:26.324" level="INFO">Clicking element 'css:button[name=Entrar]'.</msg>
+<status status="PASS" starttime="20221019 20:32:26.324" endtime="20221019 20:32:26.367"/>
+</kw>
+<status status="PASS" starttime="20221019 20:32:26.137" endtime="20221019 20:32:26.368"/>
+</kw>
+<kw name="Mensagem alerta Login">
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Login Incorreto</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20221019 20:32:26.368" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20221019 20:32:26.368" endtime="20221019 20:32:26.371"/>
+</kw>
+<status status="PASS" starttime="20221019 20:32:26.368" endtime="20221019 20:32:26.371"/>
+</kw>
+<kw name="Encerra sessão" library="baseCadastroAnimal" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221019 20:32:26.776" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-147.png"&gt;&lt;img src="selenium-screenshot-147.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221019 20:32:26.372" endtime="20221019 20:32:26.776"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221019 20:32:26.776" endtime="20221019 20:32:28.828"/>
+</kw>
+<status status="PASS" starttime="20221019 20:32:26.371" endtime="20221019 20:32:28.828"/>
+</kw>
+<tag>login_falha</tag>
+<status status="PASS" starttime="20221019 20:32:25.105" endtime="20221019 20:32:28.828"/>
+</test>
+<status status="FAIL" starttime="20221019 20:32:20.736" endtime="20221019 20:32:28.830"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">animal_sucesso</stat>
+<stat pass="1" fail="0" skip="0">login_falha</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="cadastroAnimal">cadastroAnimal</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
