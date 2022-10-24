@@ -39,7 +39,7 @@ unset($_SESSION["idA"]);
         pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{5,40}" 
         title="Senha entre 5 e 40 caracteres, com letra maiúscula, minúscula e número" required> <br>
 
-        <button> Entrar </button>
+        <button name="Entrar"> Entrar </button>
     </div>
    
 
