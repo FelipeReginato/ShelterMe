@@ -15,7 +15,7 @@ $status = $_POST['campoStatus'];
 $dataStatus = $_POST['campoDataStatus'];
 $dataNasc = $_POST['campoDataNasc'];
 $nome = $_POST['campoNome'];
-
+$imagem = $_POST['campoImagem'];
 
 if($dataNasc != ""){
     if (strpos($dataNasc,"-") != false){
@@ -57,10 +57,8 @@ if (!$conn) {
     die("Falha na conexão com o Banco de Dados: " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO animal (CodPessoa, Especie, Raca, Sexo, Especs, Peso, Status, DataStatus, DataNasc, Estado, Cidade, Endereco, Nome) 
-    VALUES ('$id','$especie','$raca','$sexo','$espcs','$peso','$status','$novaDataStatus','$novaDataNasc','$estado','$cidade','$endereco','$nome')";
-
-
+$sql = "INSERT INTO animal (CodPessoa, Especie, Raca, Sexo, Especs, Peso, Status, DataStatus, DataNasc, Estado, Cidade, Endereco, Nome, Imagem) 
+    VALUES ('$id','$especie','$raca','$sexo','$espcs','$peso','$status','$novaDataStatus','$novaDataNasc','$estado','$cidade','$endereco','$nome','$imagem')";
 
 
 if ($result = mysqli_query($conn, $sql)) {
@@ -78,7 +76,6 @@ if ($result = mysqli_query($conn, $sql)) {
     </script>
     <?php
 }
-
 
 mysqli_close($conn);
 ?>

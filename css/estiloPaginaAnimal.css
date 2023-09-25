@@ -1,12 +1,12 @@
 body{
     background-image: url(../imagens/background2.jpg);
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 
 .divCampo{
-
+    
     height: 520px;
     width: 700px;
     margin-left: auto;

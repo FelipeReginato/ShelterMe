@@ -3,6 +3,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="../css/estiloPaginaAnimal.css">
         <script src="../Scripts/scriptsPaginaAnimal.js"></script>
+
     </head>
     <body>
         
@@ -11,65 +12,63 @@
         <div class="divCadastro"> Cadastrar Animal</div>
         
     <div class="divCampo">
-        <form action="../php/enviarDadosAnimal.php" method="post">
+        <form action="../php/enviarDadosAnimal.php" method="post"enctype="multipart/form-data">
                
-                    <input name="campoNome" type="text" placeholder="Nome do Animal" minlength="5" maxlength="30" required>
-            
-                
-                
-                
+                <input type="file" name="campoImagem" accept="image/*">    
 
-                    <input name="campoEspcs" type="text" placeholder="Especificações" maxlength="60" minlength="5"
-                    title="Especificações entre 5 e 60 letras" required>
-              
+                <input name="campoNome" type="text" placeholder="Nome do Animal" minlength="5" maxlength="30" required>                
+
+                <input name="campoEspcs" type="text" placeholder="Especificações" maxlength="60" minlength="5"
+                title="Especificações entre 5 e 60 letras" required>
           
-                    <input name="campoPeso" type="text" placeholder="Peso (Opcional)" maxlength="20">
-                    <input name="campoEstado" type="text" placeholder="Estado" maxlength="30" 
-                    pattern="[a-zA-ZÀ-ž\s]{5,30}" title="Estado entre 5 e 30 letras" required>
-                    <input id = "troca1" onclick="trocaDate1()" onblur="trocaText1()" max="2022-06-01" name="campoDataNasc" type="text" placeholder="Data de nascimento do animal" maxlength="50">
-                    <input id = "troca2" onclick="trocaDate2()" onblur="trocaText2()" max="2022-06-01" name="campoDataStatus" type="text" placeholder="Data da perda/Data de encontro" maxlength="50">
+                <input name="campoPeso" type="text" placeholder="Peso (Opcional)" maxlength="20">
 
-                    <input name="campoCidade" type="text" placeholder="Cidade" maxlength="40"
-                    pattern="[a-zA-ZÀ-ž\s]{5,40}" title="Cidade entre 5 e 40 letras" required>
+                <input name="campoEstado" type="text" placeholder="Estado" maxlength="30" 
+                pattern="[a-zA-ZÀ-ž\s]{5,30}" title="Estado entre 5 e 30 letras" required>
+
+                <input id = "troca1" onclick="trocaDate1()" onblur="trocaText1()" name="campoDataNasc" type="text" placeholder="Data de nascimento do animal" maxlength="50">
+                <input id = "troca2" onclick="trocaDate2()" onblur="trocaText2()" name="campoDataStatus" type="text" placeholder="Data da perda/Data de encontro" maxlength="50">
+
+                <input name="campoCidade" type="text" placeholder="Cidade" maxlength="40"
+                pattern="[a-zA-ZÀ-ž\s]{5,40}" title="Cidade entre 5 e 40 letras" required>
                 
-                    <input name="campoEndereco" type="text" placeholder="Endereço" minlenght="8" maxlength="50" required>
+                <input name="campoEndereco" type="text" placeholder="Endereço" minlenght="8" maxlength="50" required>
 
-
-                    <div class="divSelect">
-                        <label for="selectEspecie" >Espécie do Animal:</label>
+                <div class="divSelect">
+                    <label for="selectEspecie" >Espécie do Animal:</label>
                         <select name="campoEspecie" onchange="MudaRaca()" id="selectEspecie" required>
                             <option></option>
                             <option value="Cachorro">Cachorro</option>
                             <option value="Gato">Gato</option>
                             <option value="Pássaro">Pássaro</option>
                         </select>
-                    </div>
+                </div>
                     
-                    <div class="divSelect">
-                        <label for="selectRaca">Raça do animal:</label>
-                        <select name="campoRaca" id="selectRaca" required>
-                        </select>
-                    </div>
+                <div class="divSelect">
+                    <label for="selectRaca">Raça do animal:</label>
+                    <select name="campoRaca" id="selectRaca" required>
+                    </select>
+                </div>
             
             
-            <div class="divSelect">
-                <label for="selectSexo">Sexo do animal:</label>
-                <select name="campoSexo" id="selectSexo" required>
-                    <option></option>
-                    <option value="Macho">Macho</option>
-                    <option value="Fêmea">Fêmea</option>
-                    <option value="Desconhecido">Não Sei</option>
-                </select>
-            </div>
+                <div class="divSelect">
+                    <label for="selectSexo">Sexo do animal:</label>
+                    <select name="campoSexo" id="selectSexo" required>
+                        <option></option>
+                        <option value="Macho">Macho</option>
+                        <option value="Fêmea">Fêmea</option>
+                        <option value="Desconhecido">Não Sei</option>
+                    </select>
+                </div>
 
-            <div class="divSelect">
-                <label for="selectStatus">Status do animal:</label>
-                <select name="campoStatus" id="selectStatus" required>
-                    <option class="Opcao"></option>
-                    <option value="Perdido">Perdido</option>
-                    <option value="Encontrado">Encontrado</option>
-                </select>
-            </div>    
+                <div class="divSelect">
+                    <label for="selectStatus">Status do animal:</label>
+                    <select name="campoStatus" id="selectStatus" required>
+                        <option class="Opcao"></option>
+                        <option value="Perdido">Perdido</option>
+                        <option value="Encontrado">Encontrado</option>
+                    </select>
+                </div>    
                 <button name="Enviar" class="botaoEnviar">Criar postagem</button>
             </form>
         </div>

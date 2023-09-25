@@ -1,8 +1,6 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        
-        <script src="../Scripts/scriptsPaginaPrincipal.js"></script>
         <link rel="stylesheet" href="../css/estilosPaginaPrincipal.css">
      
 
@@ -11,27 +9,22 @@
     <body>
         <ol class="Menu">
 
-            <li class="liMenuPrimeiro"> <img src="../imagens/PataIcone.png" onclick="AparecerOpcoes()" class="Icones" title="Funções com o Animal" ></li>
+            <li class="liMenu"><img src="../imagens/Desconectar.png" class="Icones" title="Desconectar" onclick="location.href='menuPrincipal.php'"></li>
       
             <li class="liMenu"><img src="../imagens/AboutUs.png" class="Icones" title="AboutUS" onclick="location.href='../paginas/AboutUs.html'"> </li>
 
-            <h3 class= "CorAbrigo" id="tiraUsu" onclick="TirarPublUsu()">Cor publicação (Abrigo)</h3>
-            <h3 class= "CorUsuario" id="tiraAbr" onclick="TirarPublAbrigo()">Cor publicação (Usuario)</h3>
-
-            <li class="liMenuSair"><img src="../imagens/Desconectar.png" class="Icones" title="Desconectar" onclick="location.href='menuPrincipal.php'"></li>
-
-        </ol>
-     
-        <ol id="liPata" class="OlSubMenu">
+            <li class="liMenuPata"> <img src="../imagens/LogoSemShelter.png" class="Icones" title="Funções com o Animal" >    </li>
             
-            <li class="liCadastrar" onclick="location.href='../paginas/paginaAnimal.html'"> Cadastrar Novo Animal </li>
-            <li class="lisSubMenus" onclick="location.href='listarDadosPubl.php'"> Editar Cadastrados </li>
-           
+            <li class="liMenuFuncao" onclick="location.href='../paginas/paginaAnimal.html'">Cadastrar Novo Animal</li> 
+
+            <li class="liMenuFuncao" onclick="location.href='listarDadospubl.php'">Editar Cadastrados</li>
         
         </ol>
-
+     
+        
         <div class="divPublicacoes">
         <?php
+        
 require 'conectarBD.php';
 $conn = mysqli_connect($servername, $username, $password, $database);
 
@@ -72,21 +65,30 @@ while ($row = mysqli_fetch_assoc($result)) {
         <table class="tableDados"> 
          
         <tr class="trDados">
+        <ul>
+            <li>
+            <td class= "tdDadosUsuario">
+            <label><b>Contato:</b></label>
+            <?php echo $row["Email"]; ?> 
+            </td>
+        
+            <td class= "tdDadosUsuario">
+            <label><b>Nome:</b></label>
+            <?php echo $row["Nome"]; ?> 
+            </td>
+        
+            <td class= "tdDadosUsuario">
+            <label><b>Especie:</b></label>
+            <?php echo $row["Especie"]; ?> 
+            </td>
+            </li>
        
         <td class= "tdDadosUsuario">
-        <label><b>Contato:</b></label>
-        <?php echo $row["Email"]; ?> 
+        <label><b>Imagem:</b></label>
+        <?php echo $row["Imagem"]; ?> 
         </td>
+       
         
-        <td class= "tdDadosUsuario">
-        <label><b>Nome:</b></label>
-        <?php echo $row["Nome"]; ?> 
-        </td>
-        
-        <td class= "tdDadosUsuario">
-        <label><b>Especie:</b></label>
-        <?php echo $row["Especie"]; ?> 
-        </td>
         
         <td class= "tdDadosUsuario">
         <label><b>Raça:</b></label>
@@ -138,6 +140,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         <label><b>Data Perda/Encontro:</b></label>
         <?php echo $dataFinalStatus; ?> 
         </td>
+        </ul>
 
         </table>
 </span>

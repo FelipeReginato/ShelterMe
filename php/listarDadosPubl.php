@@ -72,6 +72,11 @@ while ($row = mysqli_fetch_assoc($result)) {
         </td>
         
         <td class= "tdDados">
+        <label><b></b></label>
+        <?php echo $row["Imagem"]; ?> 
+        </td>
+        
+        <td class= "tdDados">
         <label><b>Nome:</b></label>
         <?php echo $row["Nome"]; ?> 
         </td>

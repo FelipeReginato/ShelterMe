@@ -9,35 +9,36 @@
 
 
     <body>
-        <div class="divBackground">
 
         <?php
         session_start();
         unset($_SESSION["id"]);
         unset($_SESSION["idA"]);
         ?>
-    
-                <div class="divLogo"></div>
+    <img src="../imagens/LogoShelterMe.png" class="logo">  
+        <div class="divPai">
+                <div class="divAboutUs">
 
-                <div class="divTexto">Bem vindo(a) ao ShelterMe, Nosso objetivo é facilitar a localização de animais perdidos por meio da cooperação entre os usuários, e, com a colaboração de abrigos, ajudamos animais abandonados. </div>
-
+                <button class="botao" onclick="window.location.href = '../paginas/AboutUs.html'">
+                        AboutUs
+                    </button>
+                </div>
 
                 <div class="divBotoes">
-                    
-                    <button class="botaoLogin" onclick="window.location.href = '../php/loginUsuario.php'">
+
+                    <button class="botao" onclick="window.location.href = '../php/loginUsuario.php'">
                         Ir para Login
                     </button> 
                     
-                    <button class="botaoCadastro" onclick="window.location.href = '../php/cadastroUsuario.php'">
+                    <button class="botao" onclick="window.location.href = '../php/cadastroUsuario.php'">
                         Ir para Cadastro
                     </button>
 
-                    <button class="botaoCadastro" onclick="window.location.href = '../php/cadastroAbrigo.php'">
+                    <button class="botao" onclick="window.location.href = '../php/cadastroAbrigo.php'">
                         Ir para Cadastro de Abrigo
                     </button>
-                    
                 </div>
-            </div>
-
+                  
+        </div>
     </body>
 </html>
